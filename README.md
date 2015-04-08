@@ -107,6 +107,7 @@ Styles for time input fields
 
 #### Other props
 
+ * useArrowKeys: Boolean - defaults to true. When this prop is `true`, you can update time values with arrow up/down keys when field is focused. Set to `false` if you don't want this behavior
  * inputFactory: Function(props) - you can control how to render the time inputs, by using this function. It will be called with some props for the input:
 
     * props.timeName: String - the name of the input ('hour', 'minute', etc)
