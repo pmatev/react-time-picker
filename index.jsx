@@ -21,7 +21,13 @@ var App = React.createClass({
 	},
 
 	render: function(){
-		return <div style={{margin: 50}}>
+		return <div style={{margin: 20}}>
+
+			<h1>React Time Picker</h1>
+
+			<code>npm install --save react-time-picker</code>
+			<p>Github: <a href="https://github.com/zippyui/react-time-picker">github.com/zippyui/react-time-picker</a></p>
+
 			<div style={defaultStyle}>
 				<TimePicker defaultValue='11:34:56' />
 			</div>
@@ -38,6 +44,8 @@ var App = React.createClass({
 				<p>This one only shows hour and meridian</p>
 				<TimePicker defaultValue='11 AM' />
 			</div>
+
+			<p style={{marginTop: 30}}>For a date picker, see <a href="http://zippyui.github.io/react-date-picker/">zippyui.github.io/react-date-picker</a></p>
 		</div>
 	}
 })
