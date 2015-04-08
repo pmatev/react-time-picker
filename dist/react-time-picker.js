@@ -11,41 +11,41 @@
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 /******/ })
@@ -109,6 +109,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			return {
 				normalizeStyle: true,
 				stopChangePropagation: true,
+				useArrowKeys: true,
 
 				//makes 15:78 be converted to 15:00, and not to 16:18
 				strict: true,
@@ -257,6 +258,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 		onArrowMouseDown: function(props, dir, name, event){
 
+			event.preventDefault()
+
 			if (name == 'meridian'){
 				this.onArrowMeridianAction(props, dir, name)
 				return
@@ -357,6 +360,17 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 
 		setValue: function(time){
+
+			var focused  = this.state.focused
+			var newState = {}
+
+			if (focused){
+				Object.keys(focused).forEach(function(key){
+					if (focused[key]){
+						focused[key].value = this.format(this.props, key, time[key])
+					}
+				}, this)
+			}
 
 			if (this.props.value == null){
 				this.setState({
@@ -488,11 +502,14 @@ return /******/ (function(modules) { // webpackBootstrap
 				timeName: name,
 				style   : inputStyle,
 				value   : value,
-	      onBlur  : this.handleInputBlur.bind(this, props, name),
-	      onChange: this.handleInputChange.bind(this, props, name),
-	      onFocus : this.handleInputFocus.bind(this, props, name),
-	      onKeyUp : this.handleInputKeyUp.bind(this, props, name)
+	      		onBlur  : this.handleInputBlur.bind(this, props, name),
+	      		onChange: this.handleInputChange.bind(this, props, name),
+	      		onFocus : this.handleInputFocus.bind(this, props, name),
 			})
+
+			if (props.useArrowKeys){
+				inputProps.onKeyDown = this.handleInputKeyDown.bind(this, props, name)
+			}
 
 			if (name == 'meridian'){
 				inputProps.onMouseDown = this.onMeridianInputMouseDown.bind(this, props)
@@ -544,17 +561,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			this.setState({})
 			props.stopChangePropagation && event.stopPropagation()
-	  },
+	  	},
 
-	  handleInputKeyUp: function(props, name, event){
-	    if (event.key === 'ArrowDown') {
-	      this.incValue(props, name, -1);
-	    }
-	    if (event.key === 'ArrowUp') {
-	      this.incValue(props, name, 1);
-	    }
-	    this.setState({focused: {}})
-	  },
+	  	handleInputKeyDown: function(props, name, event){
+
+	    	if (event.key === 'ArrowDown') {
+	      		this.incValue(props, name, -1)
+	    	}
+
+	    	if (event.key === 'ArrowUp') {
+	      		this.incValue(props, name, 1)
+	    	}
+	  	},
 
 		getTime: function(){
 			var strict = this.props.strict
@@ -727,7 +745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var parseTime      = __webpack_require__(13)
+	var parseTime      = __webpack_require__(17)
 	var adjustOverflow = parseTime.adjustOverflow
 
 	var defaults = {}
@@ -822,7 +840,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var update = __webpack_require__(13).updateTime
+	var update = __webpack_require__(17).updateTime
 
 	module.exports = function(time, name, value, config){
 		time = update(time, name, value, config)
@@ -1133,11 +1151,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var hasOwn      = __webpack_require__(14)
-	var getPrefixed = __webpack_require__(15)
+	var hasOwn      = __webpack_require__(13)
+	var getPrefixed = __webpack_require__(14)
 
-	var map      = __webpack_require__(16)
-	var plugable = __webpack_require__(17)
+	var map      = __webpack_require__(15)
+	var plugable = __webpack_require__(16)
 
 	function plugins(key, value){
 
@@ -1203,17 +1221,103 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var assign = __webpack_require__(9)
-	var defaults = __webpack_require__(18)
+	module.exports = function(obj, prop){
+		return Object.prototype.hasOwnProperty.call(obj, prop)
+	}
+
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var getStylePrefixed = __webpack_require__(18)
+	var properties       = __webpack_require__(19)
+
+	module.exports = function(key, value){
+
+		if (!properties[key]){
+			return key
+		}
+
+		return getStylePrefixed(key, value)
+	}
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = function(fn, item){
+
+		if (!item){
+			return
+		}
+
+		if (Array.isArray(item)){
+			return item.map(fn).filter(function(x){
+				return !!x
+			})
+		} else {
+			return fn(item)
+		}
+	}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var getCssPrefixedValue = __webpack_require__(20)
+
+	module.exports = function(target){
+		target.plugins = target.plugins || [
+			(function(){
+				var values = {
+					'flex':1,
+					'inline-flex':1
+				}
+
+				return function(key, value){
+					if (key === 'display' && value in values){
+						return {
+							key  : key,
+							value: getCssPrefixedValue(key, value)
+						}
+					}
+				}
+			})()
+		]
+
+		target.plugin = function(fn){
+			target.plugins = target.plugins || []
+
+			target.plugins.push(fn)
+		}
+
+		return target
+	}
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var assign = __webpack_require__(30)
+	var defaults = __webpack_require__(21)
 
 	function trim(str){
 		return str.trim()
 	}
 
-	var validHour     = __webpack_require__(19)
-	var validMinute   = __webpack_require__(20)
-	var validSecond   = __webpack_require__(21)
-	var validMeridian = __webpack_require__(22)
+	var validHour     = __webpack_require__(22)
+	var validMinute   = __webpack_require__(23)
+	var validSecond   = __webpack_require__(24)
+	var validMeridian = __webpack_require__(25)
 
 	function getHour(value, config){
 		if (validHour(value, assign({}, config, config.hour))){
@@ -1377,10 +1481,10 @@ return /******/ (function(modules) { // webpackBootstrap
 		return result
 	}
 
-	var isValidPart = __webpack_require__(23)
-	var isValidTime = __webpack_require__(24)
-	var updateTime  = __webpack_require__(25)
-	var adjustOverflow  = __webpack_require__(26)
+	var isValidPart = __webpack_require__(26)
+	var isValidTime = __webpack_require__(27)
+	var updateTime  = __webpack_require__(28)
+	var adjustOverflow  = __webpack_require__(29)
 
 	PARSE.isValidPart    = isValidPart
 	PARSE.isValidTime    = isValidTime
@@ -1390,93 +1494,147 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = PARSE
 
 /***/ },
-/* 14 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = function(obj, prop){
-		return Object.prototype.hasOwnProperty.call(obj, prop)
-	}
+	var toUpperFirst = __webpack_require__(31)
+	var getPrefix    = __webpack_require__(32)
+	var el           = __webpack_require__(33)
 
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var getStylePrefixed = __webpack_require__(27)
-	var properties       = __webpack_require__(28)
+	var MEMORY = {}
+	var STYLE
+	var ELEMENT
 
 	module.exports = function(key, value){
 
-		if (!properties[key]){
-			return key
-		}
+	    ELEMENT = ELEMENT || el()
+	    STYLE   = STYLE   || ELEMENT.style
 
-		return getStylePrefixed(key, value)
+	    var k = key// + ': ' + value
+
+	    if (MEMORY[k]){
+	        return MEMORY[k]
+	    }
+
+	    var prefix
+	    var prefixed
+
+	    if (!(key in STYLE)){//we have to prefix
+
+	        prefix = getPrefix('appearance')
+
+	        if (prefix){
+	            prefixed = prefix + toUpperFirst(key)
+
+	            if (prefixed in STYLE){
+	                key = prefixed
+	            }
+	        }
+	    }
+
+	    MEMORY[k] = key
+
+	    return key
 	}
 
 /***/ },
-/* 16 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = function(fn, item){
+	module.exports = {
+	  'alignItems': 1,
+	  'justifyContent': 1,
+	  'flex': 1,
+	  'flexFlow': 1,
 
-		if (!item){
-			return
-		}
-
-		if (Array.isArray(item)){
-			return item.map(fn).filter(function(x){
-				return !!x
-			})
-		} else {
-			return fn(item)
-		}
+	  'userSelect': 1,
+	  'transform': 1,
+	  'transition': 1,
+	  'transformOrigin': 1,
+	  'transformStyle': 1,
+	  'transitionProperty': 1,
+	  'transitionDuration': 1,
+	  'transitionTimingFunction': 1,
+	  'transitionDelay': 1,
+	  'borderImage': 1,
+	  'borderImageSlice': 1,
+	  'boxShadow': 1,
+	  'backgroundClip': 1,
+	  'backfaceVisibility': 1,
+	  'perspective': 1,
+	  'perspectiveOrigin': 1,
+	  'animation': 1,
+	  'animationDuration': 1,
+	  'animationName': 1,
+	  'animationDelay': 1,
+	  'animationDirection': 1,
+	  'animationIterationCount': 1,
+	  'animationTimingFunction': 1,
+	  'animationPlayState': 1,
+	  'animationFillMode': 1,
+	  'appearance': 1
 	}
 
 /***/ },
-/* 17 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var getCssPrefixedValue = __webpack_require__(29)
+	var getPrefix     = __webpack_require__(32)
+	var forcePrefixed = __webpack_require__(34)
+	var el            = __webpack_require__(33)
 
-	module.exports = function(target){
-		target.plugins = target.plugins || [
-			(function(){
-				var values = {
-					'flex':1,
-					'inline-flex':1
-				}
+	var MEMORY = {}
+	var STYLE
+	var ELEMENT
 
-				return function(key, value){
-					if (key === 'display' && value in values){
-						return {
-							key  : key,
-							value: getCssPrefixedValue(key, value)
-						}
-					}
-				}
-			})()
-		]
+	module.exports = function(key, value){
 
-		target.plugin = function(fn){
-			target.plugins = target.plugins || []
+	    ELEMENT = ELEMENT || el()
+	    STYLE   = STYLE   ||  ELEMENT.style
 
-			target.plugins.push(fn)
-		}
+	    var k = key + ': ' + value
 
-		return target
+	    if (MEMORY[k]){
+	        return MEMORY[k]
+	    }
+
+	    var prefix
+	    var prefixed
+	    var prefixedValue
+
+	    if (!(key in STYLE)){
+
+	        prefix = getPrefix('appearance')
+
+	        if (prefix){
+	            prefixed = forcePrefixed(key, value)
+
+	            prefixedValue = '-' + prefix.toLowerCase() + '-' + value
+
+	            if (prefixed in STYLE){
+	                ELEMENT.style[prefixed] = ''
+	                ELEMENT.style[prefixed] = prefixedValue
+
+	                if (ELEMENT.style[prefixed] !== ''){
+	                    value = prefixedValue
+	                }
+	            }
+	        }
+	    }
+
+	    MEMORY[k] = value
+
+	    return value
 	}
 
 /***/ },
-/* 18 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1487,13 +1645,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 19 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var validNumber = __webpack_require__(30)
-	var assign      = __webpack_require__(9)
+	var validNumber = __webpack_require__(35)
+	var assign      = __webpack_require__(30)
 
 	module.exports = function validHour(value, config){
 		config = assign({}, config)
@@ -1516,13 +1674,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 20 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var validNumber = __webpack_require__(30)
-	var assign      = __webpack_require__(9)
+	var validNumber = __webpack_require__(35)
+	var assign      = __webpack_require__(30)
 
 	module.exports = function validMinute(value, config){
 
@@ -1539,13 +1697,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 21 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var validMinute = __webpack_require__(20)
-	var assign      = __webpack_require__(9)
+	var validMinute = __webpack_require__(23)
+	var assign      = __webpack_require__(30)
 
 	module.exports = function validSecond(value, config){
 		config = assign({}, config)
@@ -1555,7 +1713,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 22 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1571,15 +1729,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 23 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var validHour     = __webpack_require__(19)
-	var validMinute   = __webpack_require__(20)
-	var validSecond   = __webpack_require__(21)
-	var validMeridian = __webpack_require__(22)
+	var validHour     = __webpack_require__(22)
+	var validMinute   = __webpack_require__(23)
+	var validSecond   = __webpack_require__(24)
+	var validMeridian = __webpack_require__(25)
 
 	var VALIDATION_MAP = {
 		hour    : validHour,
@@ -1624,13 +1782,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 24 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var isValidPart = __webpack_require__(23)
-	var assign = __webpack_require__(9)
+	var isValidPart = __webpack_require__(26)
+	var assign = __webpack_require__(30)
 
 	module.exports = function isValidTime(time, config){
 
@@ -1657,18 +1815,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 25 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var assign      = __webpack_require__(9)
-	var isValidNumber = __webpack_require__(30)
-	var isValidPart = __webpack_require__(23)
-	var isValidTime = __webpack_require__(24)
-	var adjustOverflow = __webpack_require__(26)
+	var assign      = __webpack_require__(30)
+	var isValidNumber = __webpack_require__(35)
+	var isValidPart = __webpack_require__(26)
+	var isValidTime = __webpack_require__(27)
+	var adjustOverflow = __webpack_require__(29)
 
-	var clamp = __webpack_require__(31)
+	var clamp = __webpack_require__(36)
 
 	/**
 	 * @param {Object} time
@@ -1719,7 +1877,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 26 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1845,208 +2003,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var toUpperFirst = __webpack_require__(32)
-	var getPrefix    = __webpack_require__(33)
-	var el           = __webpack_require__(34)
-
-	var MEMORY = {}
-	var STYLE
-	var ELEMENT
-
-	module.exports = function(key, value){
-
-	    ELEMENT = ELEMENT || el()
-	    STYLE   = STYLE   || ELEMENT.style
-
-	    var k = key// + ': ' + value
-
-	    if (MEMORY[k]){
-	        return MEMORY[k]
-	    }
-
-	    var prefix
-	    var prefixed
-
-	    if (!(key in STYLE)){//we have to prefix
-
-	        prefix = getPrefix('appearance')
-
-	        if (prefix){
-	            prefixed = prefix + toUpperFirst(key)
-
-	            if (prefixed in STYLE){
-	                key = prefixed
-	            }
-	        }
-	    }
-
-	    MEMORY[k] = key
-
-	    return key
-	}
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = {
-	  'alignItems': 1,
-	  'justifyContent': 1,
-	  'flex': 1,
-	  'flexFlow': 1,
-
-	  'userSelect': 1,
-	  'transform': 1,
-	  'transition': 1,
-	  'transformOrigin': 1,
-	  'transformStyle': 1,
-	  'transitionProperty': 1,
-	  'transitionDuration': 1,
-	  'transitionTimingFunction': 1,
-	  'transitionDelay': 1,
-	  'borderImage': 1,
-	  'borderImageSlice': 1,
-	  'boxShadow': 1,
-	  'backgroundClip': 1,
-	  'backfaceVisibility': 1,
-	  'perspective': 1,
-	  'perspectiveOrigin': 1,
-	  'animation': 1,
-	  'animationDuration': 1,
-	  'animationName': 1,
-	  'animationDelay': 1,
-	  'animationDirection': 1,
-	  'animationIterationCount': 1,
-	  'animationTimingFunction': 1,
-	  'animationPlayState': 1,
-	  'animationFillMode': 1,
-	  'appearance': 1
-	}
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var getPrefix     = __webpack_require__(33)
-	var forcePrefixed = __webpack_require__(35)
-	var el            = __webpack_require__(34)
-
-	var MEMORY = {}
-	var STYLE
-	var ELEMENT
-
-	module.exports = function(key, value){
-
-	    ELEMENT = ELEMENT || el()
-	    STYLE   = STYLE   ||  ELEMENT.style
-
-	    var k = key + ': ' + value
-
-	    if (MEMORY[k]){
-	        return MEMORY[k]
-	    }
-
-	    var prefix
-	    var prefixed
-	    var prefixedValue
-
-	    if (!(key in STYLE)){
-
-	        prefix = getPrefix('appearance')
-
-	        if (prefix){
-	            prefixed = forcePrefixed(key, value)
-
-	            prefixedValue = '-' + prefix.toLowerCase() + '-' + value
-
-	            if (prefixed in STYLE){
-	                ELEMENT.style[prefixed] = ''
-	                ELEMENT.style[prefixed] = prefixedValue
-
-	                if (ELEMENT.style[prefixed] !== ''){
-	                    value = prefixedValue
-	                }
-	            }
-	        }
-	    }
-
-	    MEMORY[k] = value
-
-	    return value
-	}
-
-/***/ },
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var assign   = __webpack_require__(9)
-	var defaults = __webpack_require__(18)
-
-	module.exports = function validNumber(n, config){
-		var valid = !isNaN(n * 1)
-
-		if (config){
-			config = assign({}, defaults, config)
-		} else {
-			config = defaults
+	function ToObject(val) {
+		if (val == null) {
+			throw new TypeError('Object.assign cannot be called with null or undefined');
 		}
 
-		if (valid && typeof n == 'string' && config.twoDigits){
-			valid = n.length == 2
-		}
-
-		if (valid){
-			n = n * 1
-			valid = parseInt(n) === n
-		}
-
-		return valid
+		return Object(val);
 	}
+
+	module.exports = Object.assign || function (target, source) {
+		var from;
+		var keys;
+		var to = ToObject(target);
+
+		for (var s = 1; s < arguments.length; s++) {
+			from = arguments[s];
+			keys = Object.keys(Object(from));
+
+			for (var i = 0; i < keys.length; i++) {
+				to[keys[i]] = from[keys[i]];
+			}
+		}
+
+		return to;
+	};
+
 
 /***/ },
 /* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = function clamp(time, name, value){
-		if (name == 'meridian'){
-			return value
-		}
-		if (name == 'hour'){
-			var limit = 24
-
-			if (time.meridian){
-				limit = (time.hour || time.minute)? 11: 12
-			}
-
-			return value < 0?
-					0:
-					value > limit?
-						limit:
-						value
-		}
-
-		return value < 0?
-					0:
-					value > 59?
-						59:
-						value
-	}
-
-/***/ },
-/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2058,15 +2047,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var toUpperFirst = __webpack_require__(32)
+	var toUpperFirst = __webpack_require__(31)
 	var prefixes     = ["ms", "Moz", "Webkit", "O"]
 
-	var el = __webpack_require__(34)
+	var el = __webpack_require__(33)
 
 	var ELEMENT
 	var PREFIX
@@ -2097,7 +2086,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -2119,14 +2108,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var toUpperFirst = __webpack_require__(32)
-	var getPrefix    = __webpack_require__(33)
-	var properties   = __webpack_require__(28)
+	var toUpperFirst = __webpack_require__(31)
+	var getPrefix    = __webpack_require__(32)
+	var properties   = __webpack_require__(19)
 
 	/**
 	 * Returns the given key prefixed, if the property is found in the prefixProps map.
@@ -2147,7 +2136,67 @@ return /******/ (function(modules) { // webpackBootstrap
 					key
 	}
 
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var assign   = __webpack_require__(30)
+	var defaults = __webpack_require__(21)
+
+	module.exports = function validNumber(n, config){
+		var valid = !isNaN(n * 1)
+
+		if (config){
+			config = assign({}, defaults, config)
+		} else {
+			config = defaults
+		}
+
+		if (valid && typeof n == 'string' && config.twoDigits){
+			valid = n.length == 2
+		}
+
+		if (valid){
+			n = n * 1
+			valid = parseInt(n) === n
+		}
+
+		return valid
+	}
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = function clamp(time, name, value){
+		if (name == 'meridian'){
+			return value
+		}
+		if (name == 'hour'){
+			var limit = 24
+
+			if (time.meridian){
+				limit = (time.hour || time.minute)? 11: 12
+			}
+
+			return value < 0?
+					0:
+					value > limit?
+						limit:
+						value
+		}
+
+		return value < 0?
+					0:
+					value > 59?
+						59:
+						value
+	}
+
 /***/ }
 /******/ ])
 });
-;
