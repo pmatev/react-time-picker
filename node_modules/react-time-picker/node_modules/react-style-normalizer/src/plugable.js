@@ -14,7 +14,7 @@ module.exports = function(target){
 				if (key === 'display' && value in values){
 					return {
 						key  : key,
-						value: getCssPrefixedValue(key, value)
+						value: getCssPrefixedValue(key, value, true)
 					}
 				}
 			}

@@ -8,7 +8,7 @@ var MEMORY = {}
 var STYLE
 var ELEMENT
 
-module.exports = function(key, value){
+module.exports = function(key, value, force){
 
     ELEMENT = ELEMENT || el()
     STYLE   = STYLE   ||  ELEMENT.style
@@ -23,7 +23,7 @@ module.exports = function(key, value){
     var prefixed
     var prefixedValue
 
-    if (!(key in STYLE)){
+    if (force || !(key in STYLE)){
 
         prefix = getPrefix('appearance')
 

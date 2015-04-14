@@ -5,6 +5,7 @@ module.exports = {
   'justifyContent': 1,
   'flex': 1,
   'flexFlow': 1,
+  'flexGrow': 1,
 
   'userSelect': 1,
   'transform': 1,
