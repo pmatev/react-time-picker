@@ -64,9 +64,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var updateTime   = __webpack_require__(3)
 	var toUpperFirst = __webpack_require__(4)
 
-	var hasTouch = __webpack_require__(10)
+	var hasTouch = __webpack_require__(11)
 
-	var EVENT_NAMES = __webpack_require__(11)
+	var EVENT_NAMES = __webpack_require__(10)
 
 	var WHITESPACE = '\u00a0'
 
@@ -663,11 +663,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 
 		prepareStyle: function(props, state) {
-			var r =  this.normalize(assign({}, props.defaultStyle, props.style))
-
-			console.log(r);
-
-			return r
+			return this.normalize(assign({}, props.defaultStyle, props.style))
 		},
 
 		prepareSeparatorStyle: function(props, state) {
@@ -1128,16 +1124,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = 'ontouchstart' in global || (global.DocumentTouch && document instanceof DocumentTouch)
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
-	module.exports = __webpack_require__(10)?
+	module.exports = __webpack_require__(11)?
 		{
 			onMouseDown: 'onTouchStart',
 			onMouseUp  : 'onTouchEnd',
@@ -1148,6 +1137,13 @@ return /******/ (function(modules) { // webpackBootstrap
 			onMouseUp  : 'onMouseUp',
 			onMouseMove: 'onMouseMove'
 		}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = 'ontouchstart' in global || (global.DocumentTouch && document instanceof DocumentTouch)
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 12 */
@@ -1311,7 +1307,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var assign = __webpack_require__(34)
+	var assign = __webpack_require__(30)
 	var defaults = __webpack_require__(21)
 
 	function trim(str){
@@ -1503,9 +1499,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var toUpperFirst = __webpack_require__(30)
-	var getPrefix    = __webpack_require__(31)
-	var el           = __webpack_require__(32)
+	var toUpperFirst = __webpack_require__(31)
+	var getPrefix    = __webpack_require__(32)
+	var el           = __webpack_require__(33)
 
 	var MEMORY = {}
 	var STYLE
@@ -1600,9 +1596,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var getPrefix     = __webpack_require__(31)
-	var forcePrefixed = __webpack_require__(33)
-	var el            = __webpack_require__(32)
+	var getPrefix     = __webpack_require__(32)
+	var forcePrefixed = __webpack_require__(34)
+	var el            = __webpack_require__(33)
 
 	var MEMORY = {}
 	var STYLE
@@ -1666,7 +1662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var validNumber = __webpack_require__(35)
-	var assign      = __webpack_require__(34)
+	var assign      = __webpack_require__(30)
 
 	module.exports = function validHour(value, config){
 		config = assign({}, config)
@@ -1695,7 +1691,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var validNumber = __webpack_require__(35)
-	var assign      = __webpack_require__(34)
+	var assign      = __webpack_require__(30)
 
 	module.exports = function validMinute(value, config){
 
@@ -1718,7 +1714,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var validMinute = __webpack_require__(23)
-	var assign      = __webpack_require__(34)
+	var assign      = __webpack_require__(30)
 
 	module.exports = function validSecond(value, config){
 		config = assign({}, config)
@@ -1803,7 +1799,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var isValidPart = __webpack_require__(26)
-	var assign = __webpack_require__(34)
+	var assign = __webpack_require__(30)
 
 	module.exports = function isValidTime(time, config){
 
@@ -1835,7 +1831,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var assign      = __webpack_require__(34)
+	var assign      = __webpack_require__(30)
 	var isValidNumber = __webpack_require__(35)
 	var isValidPart = __webpack_require__(26)
 	var isValidTime = __webpack_require__(27)
@@ -2023,11 +2019,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	module.exports = function(str){
-		return str?
-				str.charAt(0).toUpperCase() + str.slice(1):
-				''
+	function ToObject(val) {
+		if (val == null) {
+			throw new TypeError('Object.assign cannot be called with null or undefined');
+		}
+
+		return Object(val);
 	}
+
+	module.exports = Object.assign || function (target, source) {
+		var from;
+		var keys;
+		var to = ToObject(target);
+
+		for (var s = 1; s < arguments.length; s++) {
+			from = arguments[s];
+			keys = Object.keys(Object(from));
+
+			for (var i = 0; i < keys.length; i++) {
+				to[keys[i]] = from[keys[i]];
+			}
+		}
+
+		return to;
+	};
+
 
 /***/ },
 /* 31 */
@@ -2035,10 +2051,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var toUpperFirst = __webpack_require__(30)
+	module.exports = function(str){
+		return str?
+				str.charAt(0).toUpperCase() + str.slice(1):
+				''
+	}
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var toUpperFirst = __webpack_require__(31)
 	var prefixes     = ["ms", "Moz", "Webkit", "O"]
 
-	var el = __webpack_require__(32)
+	var el = __webpack_require__(33)
 
 	var ELEMENT
 	var PREFIX
@@ -2069,7 +2097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -2091,13 +2119,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var toUpperFirst = __webpack_require__(30)
-	var getPrefix    = __webpack_require__(31)
+	var toUpperFirst = __webpack_require__(31)
+	var getPrefix    = __webpack_require__(32)
 	var properties   = __webpack_require__(19)
 
 	/**
@@ -2120,44 +2148,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	function ToObject(val) {
-		if (val == null) {
-			throw new TypeError('Object.assign cannot be called with null or undefined');
-		}
-
-		return Object(val);
-	}
-
-	module.exports = Object.assign || function (target, source) {
-		var from;
-		var keys;
-		var to = ToObject(target);
-
-		for (var s = 1; s < arguments.length; s++) {
-			from = arguments[s];
-			keys = Object.keys(Object(from));
-
-			for (var i = 0; i < keys.length; i++) {
-				to[keys[i]] = from[keys[i]];
-			}
-		}
-
-		return to;
-	};
-
-
-/***/ },
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var assign   = __webpack_require__(34)
+	var assign   = __webpack_require__(30)
 	var defaults = __webpack_require__(21)
 
 	module.exports = function validNumber(n, config){
