@@ -37,11 +37,29 @@ For uncontrolled behavior, use `defaultValue` instead of `value`
 
 The time picker can also be used on touch devices.
 
+#### NOTES
+
+The time picker depends on [ReactJS](https://www.npmjs.com/package/react) and [MomentJS](https://www.npmjs.com/package/moment).
+
+If you use files from the dist folder:
+
+ * `dist/react-time-picker.js`
+ * `dist/react-time-picker.min.js`
+
+you need to make sure you have `React` global var set
+
+If you use the `.nomoment` files
+
+* `dist/react-time-picker.nomoment.js`
+* `dist/react-time-picker.nomoment.min.js`
+
+you need to make sure you have both `React` and `moment` global vars set.
+
 ## Properties
 
  * value: String - a time value - for controlled behavior
  * defaultValue: String - a time value - for uncontrolled behavior
- * onChange: Function(string) - function to be called on change
+ * onChange: Function(string, moment) - function to be called on change
 
 ### Formatting
 
@@ -49,13 +67,15 @@ The time picker can display time in multiple formats. For example, you can show 
 
 You can specify a format to decide which parts of the time picker to display
 
- * format: String - a format that dictates which parts of the time picker are displayed.
- 	Valid parts are:
+ * format: String - See http://momentjs.com/docs/#/parsing/string-format/. A format that dictates which parts of the time picker are displayed.
 
- 	 * H or HH - for hour and double digit hour
- 	 * m or mm - for minute and double digit minute
- 	 * s or ss - for second and double digit second
- 	 * a or A  - for meridian display
+ 	Valid format tokens are:
+
+     * H or HH - 0..23 - 24 hour time (hour and double digit hour)
+ 	 * h or hh - 1..12 - 12 hour time used with `a A`
+ 	 * m or mm - 0..59 for minute and double digit minute
+ 	 * s or ss - 0..59 for second and double digit second
+ 	 * a or A  - for meridiem display
 
 So you can decide what to display either by specifying a `format` or just use the appropriate formatting on the `value` you provide.
 
@@ -138,10 +158,9 @@ Check out the project, cd into it and do
 
 ```sh
 $ npm install
-$ npm run dev # to run webpack-dev-server
-$ npm run serve # to run a web server to serve your files
+$ npm run dev
 ```
-Navigate to [localhost:9091](http://localhost:9091).
+Navigate to [localhost:8080](http://localhost:8080).
 
 Change the sources in the `src` directory. When a change is detected, the browser is auto refreshed.
 

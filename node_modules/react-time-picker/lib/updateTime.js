@@ -1,9 +1,10 @@
 'use strict';
 
-var update = require('parse-time').updateTime
+var update = require('parse-time').updateTime;
 
-module.exports = function(time, name, value, config){
-	time = update(time, name, value, config)
+module.exports = function (time, name, value, config) {
 
-	return time
-}
+	time = update(time, name, value, config);
+
+	return time;
+};

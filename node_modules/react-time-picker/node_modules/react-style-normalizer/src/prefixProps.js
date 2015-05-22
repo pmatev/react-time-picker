@@ -6,6 +6,12 @@ module.exports = {
   'flex': 1,
   'flexFlow': 1,
   'flexGrow': 1,
+  'flexShrink': 1,
+  'flexBasis': 1,
+  'flexDirection': 1,
+  'flexWrap': 1,
+  'alignContent': 1,
+  'alignSelf': 1,
 
   'userSelect': 1,
   'transform': 1,

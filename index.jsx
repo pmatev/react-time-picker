@@ -29,7 +29,7 @@ var App = React.createClass({
 			<p>Github: <a href="https://github.com/zippyui/react-time-picker">github.com/zippyui/react-time-picker</a></p>
 
 			<div style={defaultStyle}>
-				<TimePicker defaultValue='11:34:56' />
+				<TimePicker defaultValue='11:34:56 PM' />
 			</div>
 
 			<div style={defaultStyle}>
