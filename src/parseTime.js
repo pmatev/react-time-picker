@@ -62,14 +62,14 @@ module.exports = function(value, config){
 		// value.minute = value.minute || 0
 		// value.second = value.second || 0
 
-		if (config.strict && value.meridian && value.hour === 12){
-			if (value.minute !== undefined){
-				value.minute = 0
-			}
-			if (value.second !== undefined){
-				value.second = 0
-			}
-		}
+		// if (config.strict && value.meridian && value.hour === 12){
+		// 	if (value.minute !== undefined){
+		// 		value.minute = 0
+		// 	}
+		// 	if (value.second !== undefined){
+		// 		value.second = 0
+		// 	}
+		// }
 	}
 
 	var result = {

@@ -3,6 +3,7 @@
 	function getHourInfo(format, value){
 		var len = 1
 		var specified = false
+		var full = false
 
 		var index = format.indexOf('h')
 
@@ -13,6 +14,7 @@
 			}
 		} else {
 			index = format.indexOf('H')
+			full = true
 			if (~index){
 				specified = true
 				if (format.charAt(index + 1) == 'H'){
@@ -22,6 +24,7 @@
 		}
 
 		return {
+			full: full,
 			len: len,
 			specified: specified
 		}
@@ -52,7 +55,7 @@
 
 		if (~index){
 			specified = true
-			if (format.charAt(index+1) == 's'){
+			if (format.charAt(index + 1) == 's'){
 				len++
 			}
 		}

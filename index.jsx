@@ -3,16 +3,18 @@
 var React      = require('react')
 var TimePicker = require('./src')
 
-var VALUE = '14:00:01'
+var VALUE = '03 AM'
 
-var onChange = function(value){
-    // value = value.substring(0, 5)
+var onChange = function(value, m, t){
+	// console.log(value, m,t);
     picker.setProps({value: value})
 }
 
 var picker = React.render(
     <TimePicker
-        value={VALUE}
+    	style={{margin: 20}}
+    	format='H:m:s a'
+        defaultValue={VALUE}
         onChange={onChange}
     />,
     document.getElementById('content')

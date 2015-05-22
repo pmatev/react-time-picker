@@ -1,16 +1,17 @@
 module.exports = {
     entry: './src/index.jsx',
     output: {
-        path         : __dirname + "/dist",
+        path         : __dirname + '/dist',
         libraryTarget: 'umd',
         library      : 'ReactTimePicker',
-        filename     : 'react-time-picker.min.js'
+        filename     : 'react-time-picker.nomoment.min.js'
     },
     module: {
         loaders: require('./loaders.config')
     },
     externals: {
-        'react': 'React'
+        'react' : 'React',
+        'moment': 'moment'
     },
     resolve: {
         // Allow to omit extensions when requiring these files

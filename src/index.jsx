@@ -1,12 +1,14 @@
-'use strict';
+'use strict'
 
-var React       = require('react')
-var assign      = require('object-assign')
-var normalize   = require('react-style-normalizer')
+var React     = require('react')
+var assign    = require('object-assign')
+var normalize = require('react-style-normalizer')
+var moment    = require('moment')
 
-var parseTime    = require('./parseTime')
-var updateTime   = require('./updateTime')
 var toUpperFirst = require('./toUpperFirst')
+
+var getFormat     = require('./getFormat')
+var getFormatInfo = require('./getFormatInfo')
 
 var hasTouch = require('has-touch')
 
@@ -17,7 +19,6 @@ var WHITESPACE = '\u00a0'
 function emptyFn(){}
 
 var twoDigits     = require('./twoDigits')
-var getFormatInfo = require('./getFormatInfo')
 var format        = require('./format')
 var formatTime    = require('./formatTime')
 
@@ -122,7 +123,7 @@ module.exports = React.createClass({
 			},
 
 			defaultMeridianInputProps: {
-				readOnly: true
+				// readOnly: true
 			},
 
 			// format: 'HHmmssa',
@@ -241,20 +242,15 @@ module.exports = React.createClass({
 	},
 
 	onMeridianInputMouseDown: function(props, event){
+		//prevent focus on mouse down on meridian input
 		event.preventDefault()
+		//the input can still be focused by tab navigation, we're okay with that
+
 		this.onArrowMeridianAction(props, 1, 'meridian')
 	},
 
 	onArrowMeridianAction: function(props, dir, name){
-		var currentMeridian = this.time.meridian
-		var lowercase = currentMeridian == 'am' || currentMeridian == 'pm'
-
-		var newValue = lowercase?
-							currentMeridian == 'am'? 'pm': 'am'
-							:
-							currentMeridian == 'AM'? 'PM': 'AM'
-
-		this.updateValue(name, newValue)
+		this.addTime('hour', dir * 12)
 	},
 
 	onArrowAction: function(props, dir, name) {
@@ -276,34 +272,52 @@ module.exports = React.createClass({
 	},
 
 	incValue: function(props, name, dir){
-		dir = dir || 0
 
-		var step     = props[name + 'Step'] || props.step
-		var amount   = dir * step
-		var time     = this.time
-		var oldValue = time[name]
-		var newValue = oldValue + amount
+		var fieldFocused = this.state.focused[name]
 
-		// this.setValue(time)
-		this.updateValue(name, newValue)
+		if (!fieldFocused || this.lastStateChange != name){
+			dir = dir || 0
+
+			var step     = props[name + 'Step'] || props.step
+			var amount   = dir * step
+
+			this.addTime(name, amount)
+
+		} else {
+
+			var value = parseInt(fieldFocused.value, 10)
+
+			value += dir
+
+			if (name == 'hour'){
+				if (props.time.meridian == 'PM'){
+					value += value < 12? 12: 0
+				}
+			}
+
+			this.setTime(name, value)
+		}
+
+		this.lastStateChange = null
 	},
 
-	updateValue: function(name, newValue, config){
-		this.setValue(this.updateTime(name, newValue, config))
+	addTime: function(name, amount){
+		this.setValue(
+			moment(this.moment).add(amount, name)
+		)
 	},
 
-	updateTime: function(name, newValue, config){
-		config = config || {}
-		config.overflowHourToMeridian = this.props.overflowHourToMeridian
+	setTime: function(name, value){
+		var clone = moment(this.moment)
+		clone.set(name, value)
 
-		var time = this.time
-
-		time = updateTime(time, name, newValue, config)
-
-		return this.time = time
+		this.setValue(clone)
 	},
 
-	setValue: function(time){
+	setValue: function(moment){
+
+		var props = this.p
+		var time  = this.getTime(moment)
 
 		var focused  = this.state.focused
 		var newState = {}
@@ -311,18 +325,20 @@ module.exports = React.createClass({
 		if (focused){
 			Object.keys(focused).forEach(function(key){
 				if (focused[key]){
-					focused[key].value = this.format(this.props, key, time[key])
+					focused[key].value = this.format(props, key, time[key])
 				}
 			}, this)
 		}
 
+		var timeString = moment.format(props.format)
+
 		if (this.props.value == null){
 			this.setState({
-				defaultValue: time
+				defaultValue: timeString
 			})
 		}
 
-		;(this.props.onChange || emptyFn)(this.props.timeToString(time, this.props.format), assign({}, time))
+		;(this.props.onChange || emptyFn)(timeString, moment, assign({}, time))
 	},
 
 	format: function(props, name, value){
@@ -339,7 +355,7 @@ module.exports = React.createClass({
 		}
 
 		if (!renderFn && typeof props.format == 'string'){
-			var formatInfo = this.formatInfo
+			var formatInfo = props.formatInfo
 			renderFn = function(value, name){
 				return format(name, value, formatInfo)
 			}
@@ -487,15 +503,10 @@ module.exports = React.createClass({
 
 	handleInputBlur: function(props, name, event){
 
+		this.incValue(props, name, 0)
+
 		this.state.focused[name] = null
 		this.setState({})
-
-		var time
-		var value = event.target.value * 1
-
-		this.updateValue(name, value, {
-			clamp: props.clamp
-		})
 	},
 
 	handleInputChange: function(props, name, event){
@@ -503,55 +514,128 @@ module.exports = React.createClass({
 			this.state.focused[name].value = event.target.value
 		}
 
+		this.lastStateChange = name
+
 		this.setState({})
 		props.stopChangePropagation && event.stopPropagation()
   	},
 
+  	/**
+  	 * Called on keydown on all inputs, including meridian
+  	 *
+  	 * @param  {Object} props
+  	 * @param  {String} name
+  	 * @param  {Event} event
+  	 */
   	handleInputKeyDown: function(props, name, event){
 
-    	if (event.key === 'ArrowDown') {
-      		this.incValue(props, name, -1)
+    	if (name == 'meridian'){
+			var letter           = String.fromCharCode(event.keyCode)
+			var isMeridianLetter = (letter == 'A' || letter == 'P')
+
+    		if (
+    			isMeridianLetter
+    			||
+    			(event.key == ' ')//space
+    			||
+    			(event.key == 'Enter')
+    			||
+    			(event.key == 'ArrowUp')
+    			||
+    			(event.key == 'ArrowDown')
+    			||
+    			(event.key == 'ArrowLeft')
+    			||
+    			(event.key == 'ArrowRight')
+    		){
+
+    			event.preventDefault()
+
+	    		if (isMeridianLetter && (letter + 'M' == this.time.meridian)){
+	    			return
+	    		}
+
+    			this.addTime('hour', 12)
+    			return
+    		}
     	}
 
-    	if (event.key === 'ArrowUp') {
-      		this.incValue(props, name, 1)
-    	}
+		if (event.key === 'ArrowDown') {
+	  		this.incValue(props, name, -1)
+		}
+
+		if (event.key === 'ArrowUp') {
+	  		this.incValue(props, name, 1)
+		}
   	},
 
-	getTime: function(){
-		var strict = this.props.strict
+  	renderHour: function(props) {
+  		return this.renderBox(props, 'hour')
+  	},
 
-		var formatInfo = this.formatInfo = getFormatInfo(this.props.format)
+  	renderMinute: function(props) {
+  		if (props.showMinute){
+  			return this.renderBox(props, 'minute')
+  		}
+  	},
 
-		return parseTime(this.getValue(), {
-			strict: strict,
+  	renderSecond: function(props) {
+  		if (props.showSecond){
+  			return this.renderBox(props, 'second')
+  		}
+  	},
 
-			hour    : formatInfo.hour,
-			minute  : formatInfo.minute,
-			second  : formatInfo.second,
-			meridian: formatInfo.meridian
-		})
+  	renderMeridian: function(props) {
+  		if (props.withMeridian){
+  			return this.renderBox(props, 'meridian')
+  		}
+  	},
+
+  	toMoment: function(value, format){
+  		format = format || this.prepareFormat(this.props)
+
+  		return moment(value, format)
+  	},
+
+	getTime: function(moment){
+
+		var formatInfo = this.p.formatInfo
+		var time       = {}
+
+		if (formatInfo.hour.specified){
+			time.hour = formatInfo.meridian.specified?
+							moment.format('h') * 1:
+							moment.hour()
+		}
+
+		if (formatInfo.minute.specified){
+			time.minute = moment.minute()
+		}
+
+		if (formatInfo.second.specified){
+			time.second = moment.second()
+		}
+
+		if (formatInfo.meridian.specified){
+			time.meridian = moment.format('A')
+		}
+
+		return time
 	},
 
-	prepareTime: function(props, state) {
-		var timeValue  = this.getTime()
-		var formatInfo = this.props.format?
-							this.formatInfo:
-							null
+	prepareFormat: function(props){
+		var value  = props.value
+		var format = props.format || getFormat(value) || 'HH:mm:ss'
 
-		props.showSecond = formatInfo?
-								formatInfo.second.specified:
-								timeValue.second !== undefined
+		return format
+	},
 
-		props.showMinute = formatInfo?
-								formatInfo.minute.specified:
-								timeValue.minute !== undefined
+	prepareBoxes: function(props) {
+		var formatInfo = props.formatInfo
 
-		props.withMeridian = formatInfo?
-								formatInfo.meridian.specified:
-								timeValue.meridian != null
-
-		return timeValue
+		props.showSecond = formatInfo.second.specified
+		props.showMinute = formatInfo.minute.specified
+		props.withMeridian = formatInfo.meridian.specified
 	},
 
 	getValue: function() {
@@ -562,32 +646,17 @@ module.exports = React.createClass({
 	    return value
 	},
 
-	renderHour: function(props) {
-		return this.renderBox(props, 'hour')
-	},
-
-	renderMinute: function(props) {
-		if (props.showMinute){
-			return this.renderBox(props, 'minute')
-		}
-	},
-
-	renderSecond: function(props) {
-		if (props.showSecond){
-			return this.renderBox(props, 'second')
-		}
-	},
-
-	renderMeridian: function(props) {
-		if (props.withMeridian){
-			return this.renderBox(props, 'meridian')
-		}
-	},
-
 	prepareProps: function(thisProps, state) {
-		var props = assign({}, thisProps)
+		var props = this.p = assign({}, thisProps)
 
-		this.time = props.time = this.prepareTime(props, state)
+		props.value  = this.getValue()
+		props.format = this.prepareFormat(props)
+		props.formatInfo = getFormatInfo(props.format)
+
+		this.moment = props.moment = this.toMoment(props.value, props.format)
+		this.time   = props.time   = this.getTime(props.moment)
+
+		this.prepareBoxes(props, state)
 		this.prepareStyles(props, state)
 
 		return props
