@@ -57,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var React = __webpack_require__(15);
-	var assign = __webpack_require__(9);
+	var assign = __webpack_require__(11);
 	var _normalize = __webpack_require__(12);
 	var moment = __webpack_require__(2);
 
@@ -66,9 +66,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var getFormat = __webpack_require__(8);
 	var getFormatInfo = __webpack_require__(3);
 
-	var hasTouch = __webpack_require__(10);
+	var hasTouch = __webpack_require__(9);
 
-	var EVENT_NAMES = __webpack_require__(11);
+	var EVENT_NAMES = __webpack_require__(10);
 
 	var WHITESPACE = ' ';
 
@@ -777,28 +777,28 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var validNumber = __webpack_require__(23)
-	var assign      = __webpack_require__(9)
+	var validNumber = __webpack_require__(23);
+	var assign = __webpack_require__(11);
 
-	module.exports = function validHour(value, config){
-		config = assign({}, config)
+	module.exports = function validHour(value, config) {
+		config = assign({}, config);
 
-		config.twoDigits = config.len == 2
+		config.twoDigits = config.len == 2;
 
-		var meridian = config.meridian
+		var meridian = config.meridian;
 
-		if (validNumber(value, config)){
-			value *= 1
+		if (validNumber(value, config)) {
+			value *= 1;
 
-			if (meridian){
-				return 0 <= value && value <= 12
+			if (meridian) {
+				return 0 <= value && value <= 12;
 			}
 
-			return 0 <= value && value < 24
+			return 0 <= value && value < 24;
 		}
 
-		return false
-	}
+		return false;
+	};
 
 /***/ },
 /* 2 */
@@ -812,110 +812,109 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-		function getHourInfo(format, value){
-			var len = 1
-			var specified = false
-			var full = false
+	function getHourInfo(format, value) {
+		var len = 1;
+		var specified = false;
+		var full = false;
 
-			var index = format.indexOf('h')
+		var index = format.indexOf('h');
 
-			if (~index){
-				specified = true
-				if (format.charAt(index + 1) == 'h'){
-					len++
+		if (~index) {
+			specified = true;
+			if (format.charAt(index + 1) == 'h') {
+				len++;
+			}
+		} else {
+			index = format.indexOf('H');
+			full = true;
+			if (~index) {
+				specified = true;
+				if (format.charAt(index + 1) == 'H') {
+					len++;
 				}
-			} else {
-				index = format.indexOf('H')
-				full = true
-				if (~index){
-					specified = true
-					if (format.charAt(index + 1) == 'H'){
-						len++
-					}
-				}
-			}
-
-			return {
-				full: full,
-				len: len,
-				specified: specified
-			}
-		}
-
-		function getMinuteInfo(format, value){
-			var len = 1
-			var specified = false
-			var index = format.indexOf('m')
-
-			if (~index){
-				specified =  true
-				if (format.charAt(index+1) == 'm'){
-					len++
-				}
-			}
-
-			return {
-				len: len,
-				specified: specified
-			}
-		}
-
-		function getSecondInfo(format, value){
-			var len = 1
-			var specified = false
-			var index = format.indexOf('s')
-
-			if (~index){
-				specified = true
-				if (format.charAt(index + 1) == 's'){
-					len++
-				}
-			}
-
-			return {
-				len: len,
-				specified: specified
-			}
-		}
-
-		function isMeridianUpperCase(format, value){
-			var uppercase = true
-			var specified = false
-			var index = format.indexOf('a')
-
-			if (~index){
-				specified = true
-				uppercase = false
-			} else if (~format.indexOf('A')){
-				specified = true
-			}
-
-			return {
-				uppercase: uppercase,
-				lowercase: !uppercase,
-				specified: specified
-			}
-		}
-
-	module.exports = function(format){
-
-		if (typeof format != 'string'){
-			return {
-				hour    : {specified: false},
-				minute  : {specified: false},
-				second  : {specified: false},
-				meridian: {specified: false}
 			}
 		}
 
 		return {
-			hour    : getHourInfo(format),
-			minute  : getMinuteInfo(format),
-			second  : getSecondInfo(format),
-			meridian: isMeridianUpperCase(format)
-		}
+			full: full,
+			len: len,
+			specified: specified
+		};
 	}
 
+	function getMinuteInfo(format, value) {
+		var len = 1;
+		var specified = false;
+		var index = format.indexOf('m');
+
+		if (~index) {
+			specified = true;
+			if (format.charAt(index + 1) == 'm') {
+				len++;
+			}
+		}
+
+		return {
+			len: len,
+			specified: specified
+		};
+	}
+
+	function getSecondInfo(format, value) {
+		var len = 1;
+		var specified = false;
+		var index = format.indexOf('s');
+
+		if (~index) {
+			specified = true;
+			if (format.charAt(index + 1) == 's') {
+				len++;
+			}
+		}
+
+		return {
+			len: len,
+			specified: specified
+		};
+	}
+
+	function isMeridianUpperCase(format, value) {
+		var uppercase = true;
+		var specified = false;
+		var index = format.indexOf('a');
+
+		if (~index) {
+			specified = true;
+			uppercase = false;
+		} else if (~format.indexOf('A')) {
+			specified = true;
+		}
+
+		return {
+			uppercase: uppercase,
+			lowercase: !uppercase,
+			specified: specified
+		};
+	}
+
+	module.exports = function (format) {
+
+		if (typeof format != 'string') {
+			return {
+				hour: { specified: false },
+				minute: { specified: false },
+				second: { specified: false },
+				meridian: { specified: false }
+			};
+		}
+
+		return {
+			hour: getHourInfo(format),
+			minute: getMinuteInfo(format),
+			second: getSecondInfo(format),
+			meridian: isMeridianUpperCase(format)
+		};
+	};
 
 /***/ },
 /* 4 */
@@ -923,11 +922,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	module.exports = function(str){
-		return str?
-				str.charAt(0).toUpperCase() + str.slice(1):
-				''
-	}
+	module.exports = function (str) {
+			return str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
+	};
 
 /***/ },
 /* 5 */
@@ -935,12 +932,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-
-	module.exports = function twoDigits(value){
-		return value < 10?
-				'0' + value:
-				value
-	}
+	module.exports = function twoDigits(value) {
+			return value < 10 ? '0' + value : value;
+	};
 
 /***/ },
 /* 6 */
@@ -948,34 +942,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var twoDigits     = __webpack_require__(5)
-	var getFormatInfo = __webpack_require__(3)
+	var twoDigits = __webpack_require__(5);
+	var getFormatInfo = __webpack_require__(3);
 
-	module.exports = function(name, value, formatOrInfo){
+	module.exports = function (name, value, formatOrInfo) {
 
-		var formatInfo = formatOrInfo
+		var formatInfo = formatOrInfo;
 
-		if (!formatInfo || !formatInfo.hour || typeof formatInfo == 'string'){
-			formatInfo = getFormatInfo(formatInfo)
+		if (!formatInfo || !formatInfo.hour || typeof formatInfo == 'string') {
+			formatInfo = getFormatInfo(formatInfo);
 		}
 
-		if (!formatInfo){
-			return
+		if (!formatInfo) {
+			return;
 		}
 
-		var info = formatInfo[name]
+		var info = formatInfo[name];
 
-		if (value && name === 'meridian' && info.specified){
-			return info.uppercase? value.toUpperCase(): value.toLowerCase()
+		if (value && name === 'meridian' && info.specified) {
+			return info.uppercase ? value.toUpperCase() : value.toLowerCase();
 		}
 
-		return info.specified?
-					info.len == 2?
-						twoDigits(value):
-						value
-					:
-					''
-	}
+		return info.specified ? info.len == 2 ? twoDigits(value) : value : '';
+	};
 
 /***/ },
 /* 7 */
@@ -983,71 +972,71 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var twoDigits      = __webpack_require__(5)
-	var getFormatInfo  = __webpack_require__(3)
-	var formatFunction = __webpack_require__(6)
+	var twoDigits = __webpack_require__(5);
+	var getFormatInfo = __webpack_require__(3);
+	var formatFunction = __webpack_require__(6);
 
-	function identity(x){
-		return x
+	function identity(x) {
+		return x;
 	}
 
-	module.exports = function(time, format){
+	module.exports = function (time, format) {
 
-		var hourFormat     = twoDigits
-		var minuteFormat   = twoDigits
-		var secondFormat   = twoDigits
-		var meridianFormat = identity
+		var hourFormat = twoDigits;
+		var minuteFormat = twoDigits;
+		var secondFormat = twoDigits;
+		var meridianFormat = identity;
 
-		if (format){
-			var formatInfo = typeof format == 'string'? getFormatInfo(format): format
+		if (format) {
+			var formatInfo = typeof format == 'string' ? getFormatInfo(format) : format;
 
-			if (formatInfo.hour.specified){
-				hourFormat = function(){
-					return formatFunction('hour', time.hour, formatInfo)
-				}
+			if (formatInfo.hour.specified) {
+				hourFormat = function () {
+					return formatFunction('hour', time.hour, formatInfo);
+				};
 			}
 
-			if (formatInfo.minute.specified){
-				minuteFormat = function(){
-					return formatFunction('minute', time.minute, formatInfo)
-				}
+			if (formatInfo.minute.specified) {
+				minuteFormat = function () {
+					return formatFunction('minute', time.minute, formatInfo);
+				};
 			}
 
-			if (formatInfo.second.specified){
-				secondFormat = function(){
-					return formatFunction('second', time.second, formatInfo)
-				}
+			if (formatInfo.second.specified) {
+				secondFormat = function () {
+					return formatFunction('second', time.second, formatInfo);
+				};
 			}
 
-			if (formatInfo.meridian.specified){
-				meridianFormat = function(){
-					return formatFunction('meridian', time.meridian, formatInfo)
-				}
+			if (formatInfo.meridian.specified) {
+				meridianFormat = function () {
+					return formatFunction('meridian', time.meridian, formatInfo);
+				};
 			}
 		}
 
-		var result = []
+		var result = [];
 
-		if (time.hour != null){
-			result.push(hourFormat(time.hour))
+		if (time.hour != null) {
+			result.push(hourFormat(time.hour));
 		}
 
-		if (time.minute != null){
-		 	result.push(minuteFormat(time.minute))
+		if (time.minute != null) {
+			result.push(minuteFormat(time.minute));
 		}
 
-		if (time.second != null){
-			result.push(secondFormat(time.second))
+		if (time.second != null) {
+			result.push(secondFormat(time.second));
 		}
 
-		var str = result.join(':')
+		var str = result.join(':');
 
-		if (time.meridian){
-			str += ' ' + meridianFormat(time.meridian)
+		if (time.meridian) {
+			str += ' ' + meridianFormat(time.meridian);
 		}
 
-		return str
-	}
+		return str;
+	};
 
 /***/ },
 /* 8 */
@@ -1055,236 +1044,255 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var assign   = __webpack_require__(9)
-	var defaults = __webpack_require__(13)
+	var assign = __webpack_require__(11);
+	var defaults = __webpack_require__(13);
 
-	function trim(str){
-		return str.trim()
+	function trim(str) {
+		return str.trim();
 	}
 
-	function notEmpty(x){return !!x }
+	function notEmpty(x) {
+		return !!x;
+	}
 
-	var isValidPart = __webpack_require__(14)
+	var isValidPart = __webpack_require__(14);
 
-	var validHour     = __webpack_require__(1)
-	var validMinute   = __webpack_require__(16)
-	var validSecond   = __webpack_require__(17)
-	var validMeridian = __webpack_require__(18)
+	var validHour = __webpack_require__(1);
+	var validMinute = __webpack_require__(16);
+	var validSecond = __webpack_require__(17);
+	var validMeridian = __webpack_require__(18);
 
-	function getHour(value, config){
-		if (validHour(value, assign({}, config, config.hour))){
-			return value// * 1
+	function getHour(value, config) {
+		if (validHour(value, assign({}, config, config.hour))) {
+			return value // * 1
+			;
 		}
 	}
 
-	function getMinute(value, config){
-		if (validMinute(value, assign({}, config, config.minute))){
-			return value// * 1
+	function getMinute(value, config) {
+		if (validMinute(value, assign({}, config, config.minute))) {
+			return value // * 1
+			;
 		}
 	}
 
-	function getSecond(value, config){
-		if (validSecond(value, assign({}, config, config.second))){
-			return value// * 1
+	function getSecond(value, config) {
+		if (validSecond(value, assign({}, config, config.second))) {
+			return value // * 1
+			;
 		}
 	}
 
-	function getMeridian(value, config){
-		if (validMeridian(value, assign({}, config, config.meridian))){
-			return value
+	function getMeridian(value, config) {
+		if (validMeridian(value, assign({}, config, config.meridian))) {
+			return value;
 		}
 	}
 
-	function hasMeridian(str){
-		var parts = str.split(' ')
+	function hasMeridian(str) {
+		var parts = str.split(' ');
 
-		return parts.length > 1
+		return parts.length > 1;
 	}
 
 	var GET_MAP = {
-		hour    : getHour,
-		minute  : getMinute,
-		second  : getSecond,
+		hour: getHour,
+		minute: getMinute,
+		second: getSecond,
 		meridian: getMeridian
+	};
+
+	function get(name) {
+		return GET_MAP[name];
 	}
 
-	function get(name){
-		return GET_MAP[name]
-	}
+	function parseLast(str, partName, config) {
+		config = assign({}, config, config ? config[partName] : null);
 
-	function parseLast(str, partName, config){
-		config = assign({}, config, config? config[partName]: null)
+		var withMeridian = config.meridian;
 
-		var withMeridian = config.meridian
-
-		var parts = str.split(' ').map(trim)
-		var getFn = get(partName)
+		var parts = str.split(' ').map(trim);
+		var getFn = get(partName);
 		var result = {
 			invalid: []
-		}
+		};
 
-		var partValue
-		var meridian
+		var partValue;
+		var meridian;
 
-		if (isValidPart(partName, parts[0], config)){
-			if (getFn){
-				partValue = getFn(parts[0], config)
+		if (isValidPart(partName, parts[0], config)) {
+			if (getFn) {
+				partValue = getFn(parts[0], config);
 			}
 		} else {
 			result.invalid.push({
 				name: partName,
 				value: parts[0]
-			})
+			});
 		}
 
-		if (withMeridian){
-			meridian = getMeridian(parts[1], config)
+		if (withMeridian) {
+			meridian = getMeridian(parts[1], config);
 
-			if (meridian === undefined){
+			if (meridian === undefined) {
 				result.invalid.push({
 					name: 'meridian',
 					value: parts[1]
-				})
+				});
 			}
 		}
 
-		if (meridian !== undefined){
-			result.meridian = meridian
+		if (meridian !== undefined) {
+			result.meridian = meridian;
 		}
-		if (partValue !== undefined){
-			result[partName] = partValue
+		if (partValue !== undefined) {
+			result[partName] = partValue;
 		}
 
-		return result
+		return result;
 	}
 
-	function parse(time, config){
+	function parse(time, config) {
 
-		config = assign({}, defaults, config)
+		config = assign({}, defaults, config);
 
-		var parts        = time.split(config.separator).map(trim)
-		var withMeridian = hasMeridian(parts[parts.length - 1])
+		var parts = time.split(config.separator).map(trim);
+		var withMeridian = hasMeridian(parts[parts.length - 1]);
 
-		config.meridian = withMeridian
+		config.meridian = withMeridian;
 
-		var invalids = []
-		var result = {}
-		var hour
-		var minute
+		var invalids = [];
+		var result = {};
+		var hour;
+		var minute;
 
-		if (parts.length > 3){
-			return
+		if (parts.length > 3) {
+			return;
 		}
 
-		if (parts.length == 1){
+		if (parts.length == 1) {
 			//hh am
-			assign(result, parseLast(parts[0], 'hour', config))
+			assign(result, parseLast(parts[0], 'hour', config));
 		}
-		if (parts.length == 2){
+		if (parts.length == 2) {
 			//hh:mm am
-			hour = getHour(parts[0], config)
-			if (hour === undefined){
+			hour = getHour(parts[0], config);
+			if (hour === undefined) {
 				invalids.push({
 					name: 'hour',
 					value: parts[0]
-				})
+				});
 			}
-			assign(result, parseLast(parts[1], 'minute', config))
+			assign(result, parseLast(parts[1], 'minute', config));
 		}
-		if (parts.length == 3){
+		if (parts.length == 3) {
 			//hh:mm:ss am
-			hour   = getHour(parts[0], config)
-			minute = getMinute(parts[1], config)
+			hour = getHour(parts[0], config);
+			minute = getMinute(parts[1], config);
 
-			if (hour === undefined){
+			if (hour === undefined) {
 				invalids.push({
 					name: 'hour',
 					value: parts[0]
-				})
+				});
 			}
 
-			if (minute === undefined){
+			if (minute === undefined) {
 				invalids.push({
 					name: 'minute',
 					value: parts[1]
-				})
+				});
 			}
 
-			assign(result, parseLast(parts[2], 'second', config))
+			assign(result, parseLast(parts[2], 'second', config));
 		}
 
-		if (result.invalid){
-			invalids.push.apply(invalids, result.invalid)
-			result.invalid = invalids
+		if (result.invalid) {
+			invalids.push.apply(invalids, result.invalid);
+			result.invalid = invalids;
 		}
 
-		if (hour !== undefined){
-			result.hour = hour
+		if (hour !== undefined) {
+			result.hour = hour;
 		}
 
-		if (minute !== undefined){
-			result.minute = minute
+		if (minute !== undefined) {
+			result.minute = minute;
 		}
 
-		if (!result.invalid.length){
-			delete result.invalid
+		if (!result.invalid.length) {
+			delete result.invalid;
 		}
 
-		return result
+		return result;
 	}
 
-	module.exports = function getFormat(timeString){
+	module.exports = function getFormat(timeString) {
 
-		if (typeof timeString != 'string'){
-			return
+		if (typeof timeString != 'string') {
+			return;
 		}
 
-		var time = parse(timeString)
+		var time = parse(timeString);
 
-		var format = ''
-		var hourFormat = ''
-		var minuteFormat = ''
-		var secondFormat = ''
-		var meridianFormat = ''
+		var format = '';
+		var hourFormat = '';
+		var minuteFormat = '';
+		var secondFormat = '';
+		var meridianFormat = '';
 
-		if (time.meridian != undefined){
-			meridianFormat = time.meridian == 'AM' || time.meridian == 'PM'? 'A': 'a'
+		if (time.meridian != undefined) {
+			meridianFormat = time.meridian == 'AM' || time.meridian == 'PM' ? 'A' : 'a';
 		}
 
-		if (time.hour != undefined){
-			hourFormat = meridianFormat?
-							time.hour.length == 1?
-								'h':
-								'hh'
-							:
-							time.hour.length == 1?
-								'H':
-								'HH'
+		if (time.hour != undefined) {
+			hourFormat = meridianFormat ? time.hour.length == 1 ? 'h' : 'hh' : time.hour.length == 1 ? 'H' : 'HH';
 		}
 
-		if (time.minute != undefined){
-			minuteFormat = time.minute.length == 1?
-								'm':
-								'mm'
+		if (time.minute != undefined) {
+			minuteFormat = time.minute.length == 1 ? 'm' : 'mm';
 		}
 
-		if (time.second != undefined){
-			secondFormat = time.second.length == 1?
-								's':
-								'ss'
+		if (time.second != undefined) {
+			secondFormat = time.second.length == 1 ? 's' : 'ss';
 		}
 
-		format = [hourFormat, minuteFormat, secondFormat].filter(notEmpty).join(':')
+		format = [hourFormat, minuteFormat, secondFormat].filter(notEmpty).join(':');
 
-		if (meridianFormat){
-			format += ' ' + meridianFormat
+		if (meridianFormat) {
+			format += ' ' + meridianFormat;
 		}
 
-		return format
-	}
+		return format;
+	};
 
 /***/ },
 /* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = 'ontouchstart' in global || (global.DocumentTouch && document instanceof DocumentTouch)
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = __webpack_require__(9)?
+		{
+			onMouseDown: 'onTouchStart',
+			onMouseUp  : 'onTouchEnd',
+			onMouseMove: 'onTouchMove'
+		}:
+		{
+			onMouseDown: 'onMouseDown',
+			onMouseUp  : 'onMouseUp',
+			onMouseMove: 'onMouseMove'
+		}
+
+/***/ },
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1314,31 +1322,6 @@ return /******/ (function(modules) { // webpackBootstrap
 		return to;
 	};
 
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = 'ontouchstart' in global || (global.DocumentTouch && document instanceof DocumentTouch)
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = __webpack_require__(10)?
-		{
-			onMouseDown: 'onTouchStart',
-			onMouseUp  : 'onTouchEnd',
-			onMouseMove: 'onTouchMove'
-		}:
-		{
-			onMouseDown: 'onMouseDown',
-			onMouseUp  : 'onMouseUp',
-			onMouseMove: 'onMouseMove'
-		}
 
 /***/ },
 /* 12 */
@@ -1419,7 +1402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		separator: ':',
 		twoDigits: true
-	}
+	};
 
 /***/ },
 /* 14 */
@@ -1427,17 +1410,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var validHour     = __webpack_require__(1)
-	var validMinute   = __webpack_require__(16)
-	var validSecond   = __webpack_require__(17)
-	var validMeridian = __webpack_require__(18)
+	var validHour = __webpack_require__(1);
+	var validMinute = __webpack_require__(16);
+	var validSecond = __webpack_require__(17);
+	var validMeridian = __webpack_require__(18);
 
 	var VALIDATION_MAP = {
-		hour    : validHour,
-		minute  : validMinute,
-		second  : validSecond,
-		meridian: validMeridian
-	}
+	  hour: validHour,
+	  minute: validMinute,
+	  second: validSecond,
+	  meridian: validMeridian
+	};
 
 	/**
 	 * VALIDATES TIME PART [name, value] eg ['hour', '15']
@@ -1468,11 +1451,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @return {Boolean}
 	 */
-	module.exports = function isValidPart(name, value, config){
-		var fn = VALIDATION_MAP[name]
+	module.exports = function isValidPart(name, value, config) {
+	  var fn = VALIDATION_MAP[name];
 
-		return !!(fn && fn(value, config))
-	}
+	  return !!(fn && fn(value, config));
+	};
 
 /***/ },
 /* 15 */
@@ -1486,22 +1469,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var validNumber = __webpack_require__(23)
-	var assign      = __webpack_require__(9)
+	var validNumber = __webpack_require__(23);
+	var assign = __webpack_require__(11);
 
-	module.exports = function validMinute(value, config){
+	module.exports = function validMinute(value, config) {
 
-		config = assign({}, config)
-		config.twoDigits = config.len == 2
+		config = assign({}, config);
+		config.twoDigits = config.len == 2;
 
-		if (validNumber(value, config)){
-			value *= 1
+		if (validNumber(value, config)) {
+			value *= 1;
 
-			return 0 <= value && value < 60
+			return 0 <= value && value < 60;
 		}
 
-		return false
-	}
+		return false;
+	};
 
 /***/ },
 /* 17 */
@@ -1509,15 +1492,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var validMinute = __webpack_require__(16)
-	var assign      = __webpack_require__(9)
+	var validMinute = __webpack_require__(16);
+	var assign = __webpack_require__(11);
 
-	module.exports = function validSecond(value, config){
-		config = assign({}, config)
-		config.twoDigits = config.len == 2
+	module.exports = function validSecond(value, config) {
+		config = assign({}, config);
+		config.twoDigits = config.len == 2;
 
-		return validMinute(value, config)
-	}
+		return validMinute(value, config);
+	};
 
 /***/ },
 /* 18 */
@@ -1525,15 +1508,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	module.exports = function validMeridian(value){
-		if (!value){
-			return false
+	module.exports = function validMeridian(value) {
+		if (!value) {
+			return false;
 		}
 
-		value = value.toUpperCase()
+		value = value.toUpperCase();
 
-		return value == 'AM' || value == 'PM'
-	}
+		return value == 'AM' || value == 'PM';
+	};
 
 /***/ },
 /* 19 */
@@ -1552,8 +1535,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var getStylePrefixed = __webpack_require__(24)
-	var properties       = __webpack_require__(25)
+	var getStylePrefixed = __webpack_require__(25)
+	var properties       = __webpack_require__(26)
 
 	module.exports = function(key, value){
 
@@ -1591,7 +1574,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var getCssPrefixedValue = __webpack_require__(26)
+	var getCssPrefixedValue = __webpack_require__(24)
 
 	module.exports = function(target){
 		target.plugins = target.plugins || [
@@ -1627,32 +1610,86 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var assign   = __webpack_require__(9)
-	var defaults = __webpack_require__(13)
+	var assign = __webpack_require__(11);
+	var defaults = __webpack_require__(13);
 
-	module.exports = function validNumber(n, config){
-		var valid = !isNaN(n * 1)
+	module.exports = function validNumber(n, config) {
+		var valid = !isNaN(n * 1);
 
-		if (config){
-			config = assign({}, defaults, config)
+		if (config) {
+			config = assign({}, defaults, config);
 		} else {
-			config = defaults
+			config = defaults;
 		}
 
-		if (valid && typeof n == 'string' && config.twoDigits){
-			valid = n.length == 2
+		if (valid && typeof n == 'string' && config.twoDigits) {
+			valid = n.length == 2;
 		}
 
-		if (valid){
-			n = n * 1
-			valid = parseInt(n) === n
+		if (valid) {
+			n = n * 1;
+			valid = parseInt(n) === n;
 		}
 
-		return valid
-	}
+		return valid;
+	};
 
 /***/ },
 /* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var getPrefix     = __webpack_require__(28)
+	var forcePrefixed = __webpack_require__(30)
+	var el            = __webpack_require__(29)
+
+	var MEMORY = {}
+	var STYLE
+	var ELEMENT
+
+	module.exports = function(key, value, force){
+
+	    ELEMENT = ELEMENT || el()
+	    STYLE   = STYLE   ||  ELEMENT.style
+
+	    var k = key + ': ' + value
+
+	    if (MEMORY[k]){
+	        return MEMORY[k]
+	    }
+
+	    var prefix
+	    var prefixed
+	    var prefixedValue
+
+	    if (force || !(key in STYLE)){
+
+	        prefix = getPrefix('appearance')
+
+	        if (prefix){
+	            prefixed = forcePrefixed(key, value)
+
+	            prefixedValue = '-' + prefix.toLowerCase() + '-' + value
+
+	            if (prefixed in STYLE){
+	                ELEMENT.style[prefixed] = ''
+	                ELEMENT.style[prefixed] = prefixedValue
+
+	                if (ELEMENT.style[prefixed] !== ''){
+	                    value = prefixedValue
+	                }
+	            }
+	        }
+	    }
+
+	    MEMORY[k] = value
+
+	    return value
+	}
+
+/***/ },
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1708,7 +1745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1746,60 +1783,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'animationPlayState': 1,
 	  'animationFillMode': 1,
 	  'appearance': 1
-	}
-
-/***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var getPrefix     = __webpack_require__(28)
-	var forcePrefixed = __webpack_require__(30)
-	var el            = __webpack_require__(29)
-
-	var MEMORY = {}
-	var STYLE
-	var ELEMENT
-
-	module.exports = function(key, value, force){
-
-	    ELEMENT = ELEMENT || el()
-	    STYLE   = STYLE   ||  ELEMENT.style
-
-	    var k = key + ': ' + value
-
-	    if (MEMORY[k]){
-	        return MEMORY[k]
-	    }
-
-	    var prefix
-	    var prefixed
-	    var prefixedValue
-
-	    if (force || !(key in STYLE)){
-
-	        prefix = getPrefix('appearance')
-
-	        if (prefix){
-	            prefixed = forcePrefixed(key, value)
-
-	            prefixedValue = '-' + prefix.toLowerCase() + '-' + value
-
-	            if (prefixed in STYLE){
-	                ELEMENT.style[prefixed] = ''
-	                ELEMENT.style[prefixed] = prefixedValue
-
-	                if (ELEMENT.style[prefixed] !== ''){
-	                    value = prefixedValue
-	                }
-	            }
-	        }
-	    }
-
-	    MEMORY[k] = value
-
-	    return value
 	}
 
 /***/ },
@@ -1883,7 +1866,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var toUpperFirst = __webpack_require__(27)
 	var getPrefix    = __webpack_require__(28)
-	var properties   = __webpack_require__(25)
+	var properties   = __webpack_require__(26)
 
 	/**
 	 * Returns the given key prefixed, if the property is found in the prefixProps map.
