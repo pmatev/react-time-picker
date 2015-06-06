@@ -1,0 +1,9 @@
+{
+	"esnext": true,
+
+	// environments
+	"browser"       : true,    // Web Browser (window, document, etc)
+    "browserify"    : true,    // Browserify (node.js code in the browser)
+    "node"          : true,    // Node.js
+    "maxerr": 1000
+}

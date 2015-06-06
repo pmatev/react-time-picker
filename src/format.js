@@ -1,24 +1,24 @@
 'use strict';
 
-var twoDigits     = require('./twoDigits')
-var getFormatInfo = require('./getFormatInfo')
+var twoDigits     = require('./twoDigits');
+var getFormatInfo = require('./getFormatInfo');
 
 module.exports = function(name, value, formatOrInfo){
 
-	var formatInfo = formatOrInfo
+	var formatInfo = formatOrInfo;
 
 	if (!formatInfo || !formatInfo.hour || typeof formatInfo == 'string'){
-		formatInfo = getFormatInfo(formatInfo)
+		formatInfo = getFormatInfo(formatInfo);
 	}
 
 	if (!formatInfo){
-		return
+		return;
 	}
 
-	var info = formatInfo[name]
+	var info = formatInfo[name];
 
 	if (value && name === 'meridian' && info.specified){
-		return info.uppercase? value.toUpperCase(): value.toLowerCase()
+		return info.uppercase? value.toUpperCase(): value.toLowerCase();
 	}
 
 	return info.specified?
@@ -26,5 +26,5 @@ module.exports = function(name, value, formatOrInfo){
 					twoDigits(value):
 					value
 				:
-				''
-}
+				'';
+};

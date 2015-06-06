@@ -1,3 +1,7 @@
+## Forked from (http://zippyui.github.io/react-time-picker/)
+Removed inline styles in favor of BEM style selector classes.
+
+
 # react-time-picker
 
 > A carefully crafted time picker for React

@@ -2,10 +2,10 @@
 
 module.exports = function validMeridian(value){
 	if (!value){
-		return false
+		return false;
 	}
 
-	value = value.toUpperCase()
+	value = value.toUpperCase();
 
-	return value == 'AM' || value == 'PM'
-}
+	return value == 'AM' || value == 'PM';
+};

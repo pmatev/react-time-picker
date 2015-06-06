@@ -1,0 +1,2079 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Timings",
+				"TimingsStore"
+			],
+			[
+				"Timi",
+				"TimingsStore"
+			],
+			[
+				"setTiming",
+				"setTimingAttr"
+			],
+			[
+				"timin",
+				"timing_id"
+			],
+			[
+				"_on",
+				"_onChange"
+			],
+			[
+				"get",
+				"getInitialState	Life Cycle Method"
+			],
+			[
+				"VenueTim",
+				"VenueTimingSerializer	class"
+			],
+			[
+				"Venue",
+				"VenueTimingSerializer	class"
+			],
+			[
+				"Week",
+				"WeekDaySerializer"
+			],
+			[
+				"Listr",
+				"ListSerializer	class"
+			],
+			[
+				"Vne",
+				"VenueTimingSerializer	class"
+			],
+			[
+				"VenueTimi",
+				"VenueTimingListSerializer	class"
+			],
+			[
+				"Vneue",
+				"VenueTimingSerlializer	class"
+			],
+			[
+				"VenueTii",
+				"VenueTimingSerlializer	class"
+			],
+			[
+				"permi",
+				"permissions	module"
+			],
+			[
+				"res",
+				"rest_framework	module"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"Pirce",
+				"PriceType	class"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"_get",
+				"_getPriceCategories"
+			],
+			[
+				"permis",
+				"permission_classes"
+			],
+			[
+				"_price",
+				"_priceCategories"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"categr",
+				"categoryChangeHandler"
+			],
+			[
+				"_pre",
+				"_priceTypes"
+			],
+			[
+				"PriceManae",
+				"PriceManagerActionCreator"
+			],
+			[
+				"setPrice",
+				"setPriceTypes"
+			],
+			[
+				"Prce",
+				"PriceCategorySerializer	class"
+			],
+			[
+				"cator",
+				"category"
+			],
+			[
+				"Serli",
+				"SerializerMethodField	class"
+			],
+			[
+				"getPrice",
+				"getPriceCategories"
+			],
+			[
+				"get_query",
+				"get_queryset_venue	function"
+			],
+			[
+				"get_",
+				"get_queryset_venue"
+			],
+			[
+				"venue",
+				"venue_id"
+			],
+			[
+				"new",
+				"new_entries"
+			],
+			[
+				"sid",
+				"sidebar_entry	statement"
+			],
+			[
+				"get_qe",
+				"get_queryset_venue	function"
+			],
+			[
+				"getquery",
+				"get_queryset_venue	function"
+			],
+			[
+				"Sideb",
+				"SidebarEntrySerializer	class"
+			],
+			[
+				"valid",
+				"validated_data	function"
+			],
+			[
+				"VenueSid",
+				"VenueSidebarExtra	class"
+			],
+			[
+				"exist",
+				"existing	statement"
+			],
+			[
+				"Vneu",
+				"VenueSidebarExtraSerializer	class"
+			],
+			[
+				"ex",
+				"exclude_fields"
+			],
+			[
+				"VenueSide",
+				"VenueSidebarExtraSerializer	class"
+			],
+			[
+				"diff",
+				"diff_models"
+			],
+			[
+				"Vn",
+				"VenueSidebarExtra	class"
+			],
+			[
+				"Veneu",
+				"VenueSidebarExtra	class"
+			],
+			[
+				"VneueSide",
+				"VenueSidebarExtraSerializer	class"
+			],
+			[
+				"Modl",
+				"ModelSerializer	class"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
+				"Transition",
+				"TimeoutTransitionGroup"
+			],
+			[
+				"Editv",
+				"EditVenueActionCreator"
+			],
+			[
+				"EditVenue",
+				"EditVenueActionCreator"
+			],
+			[
+				"w",
+				"watchify"
+			],
+			[
+				"clien",
+				"clientadminEntry"
+			],
+			[
+				"bundle",
+				"bundleScript"
+			],
+			[
+				"brows",
+				"browserifyScript"
+			],
+			[
+				"address_lin",
+				"address_line_1"
+			],
+			[
+				"SerializerMe",
+				"SerializerMethodField	class"
+			],
+			[
+				"Address",
+				"AddressModal"
+			],
+			[
+				"add",
+				"address_city"
+			],
+			[
+				"address",
+				"address_line_1"
+			],
+			[
+				"Edi",
+				"EditSidebar"
+			],
+			[
+				"sidebar",
+				"sidebar_entries"
+			],
+			[
+				"Facili",
+				"FacilityType	class"
+			],
+			[
+				"facili",
+				"facility-item"
+			],
+			[
+				"setFacili",
+				"setFacilityList"
+			],
+			[
+				"model",
+				"ModelSerializer	class"
+			],
+			[
+				"Faicli",
+				"FacilityType	class"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"border-",
+				"border-spacing"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"tex-",
+				"text-decoration"
+			],
+			[
+				"inner",
+				"innerText"
+			],
+			[
+				"User",
+				"UserProfile	class"
+			],
+			[
+				"default",
+				"default_storage	instance"
+			],
+			[
+				"_upl",
+				"_uploadError"
+			],
+			[
+				"image",
+				"imageId"
+			],
+			[
+				"test",
+				"test_img	statement"
+			],
+			[
+				"create",
+				"create_image	function"
+			],
+			[
+				"req",
+				"request	statement"
+			],
+			[
+				"content",
+				"content_type	param"
+			],
+			[
+				"Image",
+				"ImageSerializer	class"
+			],
+			[
+				"VenueImage",
+				"VenueImageSerializer	class"
+			],
+			[
+				"get_ob",
+				"get_object_or_404	function"
+			],
+			[
+				"Magi",
+				"MagicMock	class"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"list",
+				"ListSerializer"
+			],
+			[
+				"List",
+				"ListSerializer	class"
+			],
+			[
+				"ImageMn",
+				"ImageManagerActionCreator"
+			],
+			[
+				"_onImage",
+				"_onImageDelete"
+			],
+			[
+				"VenueIma",
+				"VenueImage	class"
+			],
+			[
+				"_pending",
+				"_pendingUpload"
+			],
+			[
+				"ImageMana",
+				"ImageManagerActionCreator"
+			],
+			[
+				"cancn",
+				"cancelUploadHandler"
+			],
+			[
+				"Im",
+				"ImageElement"
+			],
+			[
+				"pending",
+				"pendingImages"
+			],
+			[
+				"compon",
+				"componentWillReceiveProps	Life Cycle Method"
+			],
+			[
+				"ImageMnaa",
+				"ImageManagerStore"
+			],
+			[
+				"onImage",
+				"onImageUploadProgress"
+			],
+			[
+				"onImageU",
+				"onImageUploadProgress"
+			],
+			[
+				"upload",
+				"uploadProgress"
+			],
+			[
+				"flex",
+				"flex-start"
+			],
+			[
+				"comopon",
+				"componentWillUnmount	Life Cycle Method"
+			],
+			[
+				"component",
+				"componentDidMount	Life Cycle Method"
+			],
+			[
+				"Gloabl",
+				"GlobalAppStore"
+			],
+			[
+				"como",
+				"componentWillUnmount	Life Cycle Method"
+			],
+			[
+				"Imge",
+				"ImageSerializer	class"
+			],
+			[
+				"Seri",
+				"SerializerMethodField	class"
+			],
+			[
+				"Hy",
+				"HyperlinkedRelatedField	class"
+			],
+			[
+				"Model",
+				"ModelSerializer	class"
+			],
+			[
+				"slug",
+				"slugify	statement"
+			],
+			[
+				"Mode",
+				"ModelSerializer	class"
+			],
+			[
+				"venu",
+				"venue_id	param"
+			],
+			[
+				"vnue",
+				"venue_id"
+			],
+			[
+				"compone",
+				"componentDidMount	Life Cycle Method"
+			],
+			[
+				"sugge",
+				"suggestion"
+			],
+			[
+				"query",
+				"query_params"
+			],
+			[
+				"HTT",
+				"HTTP_400_BAD_REQUEST	statement"
+			],
+			[
+				"submi",
+				"submitSuggestion"
+			],
+			[
+				"autocomplete",
+				"autocomplete-input__input"
+			],
+			[
+				"q",
+				"query	statement"
+			],
+			[
+				"Search",
+				"SearchActionCreator"
+			],
+			[
+				"sugges",
+				"suggestions"
+			],
+			[
+				"onKey",
+				"onKeyDown"
+			],
+			[
+				"onIn",
+				"onInputHandler"
+			],
+			[
+				"map",
+				"mapOptions"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 6117,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "clos",
+		"selected_items":
+		[
+			[
+				"clos",
+				"File: Close All"
+			],
+			[
+				"auto",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"got",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"docs",
+				"Anaconda: Display object docs"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"format",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"au",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"goto",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"cloa",
+				"File: Close All"
+			],
+			[
+				"forma",
+				"Format: Javascript"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"doc",
+				"Anaconda: Display object docs"
+			],
+			[
+				"sapce",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"close al",
+				"File: Close All"
+			],
+			[
+				"pep",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"dif",
+				"Git: Diff Current File (Ignore Whitespace)"
+			],
+			[
+				"nex",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"reint",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"di",
+				"Git: Diff Current File (Ignore Whitespace)"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"scs",
+				"Set Syntax: SCSS"
+			],
+			[
+				"toggle lin",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"togl",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"toggle li",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"to",
+				"View: Toggle Tabs"
+			],
+			[
+				"toggl",
+				"View: Toggle Tabs"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"linter setting",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"linter",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"jsx",
+				"Set Syntax: JSX"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"enabl",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"disable",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"syntax python",
+				"Set Syntax: Python"
+			],
+			[
+				"check",
+				"Git: Checkout Current File"
+			],
+			[
+				"anacond",
+				"Anaconda: Next lint error"
+			],
+			[
+				"java",
+				"Format: Javascript"
+			],
+			[
+				"confi",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"aut",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"con",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"conf",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"cfg",
+				"Set Syntax: CFG Game Configuration"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"goot",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"goo",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"beau",
+				"HTMLBeautify"
+			],
+			[
+				"beu",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"do",
+				"Anaconda: Display object docs"
+			],
+			[
+				"go",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"gotro",
+				"Emmet: Go to Matching Pair"
+			],
+			[
+				"ogot",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"ogto",
+				"Anaconda: Goto object definition"
+			],
+			[
+				"ana",
+				"Anaconda: Show error list"
+			],
+			[
+				"show",
+				"Anaconda: Show error list"
+			],
+			[
+				"disbal",
+				"Package Control: Disable Package"
+			],
+			[
+				"anac",
+				"Anaconda: Show error list"
+			],
+			[
+				"rine",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"erin",
+				"Emmet: Increment Number by 1"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"linter lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show Errors on Save"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"lint this",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sublime linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"sublime",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"javascrip",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"disbale",
+				"Package Control: Disable Package"
+			],
+			[
+				"toggle tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"tasb",
+				"View: Toggle Tabs"
+			],
+			[
+				"nstal",
+				"Package Control: Install Package"
+			],
+			[
+				"jshin",
+				"JSHint"
+			],
+			[
+				"about",
+				"About"
+			],
+			[
+				"convert to tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"toggle tb",
+				"View: Toggle Tabs"
+			],
+			[
+				"tbas",
+				"View: Toggle Tabs"
+			],
+			[
+				"anacon",
+				"Anaconda: Run Current File Tests"
+			],
+			[
+				"conver to tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"disba",
+				"Package Control: Disable Package"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"insall",
+				"Package Control: Install Package"
+			],
+			[
+				"pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"log",
+				"Git: Log All"
+			],
+			[
+				"quic",
+				"Git: Quick Commit"
+			],
+			[
+				"psuh",
+				"Git: Push Current Branch"
+			],
+			[
+				"quick",
+				"Git: Quick Commit"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"syntax tex",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"shel",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"ngin",
+				"Set Syntax: nginx"
+			],
+			[
+				"gitadd",
+				"Git: Add..."
+			],
+			[
+				"tidy",
+				"TidyHTML"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"instla",
+				"Package Control: Install Package"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			]
+		],
+		"width": 475.0
+	},
+	"console":
+	{
+		"height": 182.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/peter/github/react-time-picker"
+	],
+	"file_history":
+	[
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/PriceManagerModal.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/constants/Constants.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/WeekDayStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/EditVenue.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/TimingsStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/TimingsActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/TimingsModal.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/constants/EditVenue.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/PriceManagerStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/timings.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/facility.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/serializers.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_timings.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/WeekDayActionCreator.js",
+		"/Users/peter/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/models/dates.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/VenueStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/TODO",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/prices.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_facility.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/models/venue.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/views.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/templates/detail.html",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/sportmembi/urls.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/serializers.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/urls.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/models/prices.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/__init__.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/_edit_venue.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/home.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/venue.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/models.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/ModalHost.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/App.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/ModalStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/GlobalAppStore.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/examples/stampsy/App.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_common.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_modals.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/browser.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/app.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/HomeBody.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/VenueActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_prices.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/_common.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/examples/stampsy/utils/Browser.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/examples/stampsy/atoms/DocumentTitle.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/fixtures/weekday.json",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/EditVenueStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/EditVenueActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/PriceManagerActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/migrations/0038_DATA_weekday.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/migrations/0037_DATA_price_types_and_categories.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_inputs.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_buttons.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_sidebar_entry.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/sidebar_entry.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/Select.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/modals/_edit_prices_modal.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_base.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/FacilityActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/Constants.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/MultiSelectBtn.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/home.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/EditSidebar.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/models/facility.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/FacilityManagerModal.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/ImageManagerModal.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/FacilityManagerStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/ImageManagerStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/models/sidebar_info.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_venue.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/migrations/0035_DATA_countries.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/sportmembi/utils.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/sportmembi/tests/test_utils.py",
+		"/Users/peter/virtual_envs/PROJ-Membi/lib/python3.4/site-packages/rest_framework/generics.py",
+		"/Users/peter/virtual_envs/PROJ-Membi/lib/python3.4/site-packages/rest_framework/mixins.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/examples/stampsy/hosts/OverlayHost.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/TimeoutTransitionGroup.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/examples/stampsy/main.524bd51c7027bb5d8183.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/stampsy/hosts/ModalHost.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_colors.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/stampsy/constants/Colors.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/stampsy/.jshintrc",
+		"/Volumes/Macintosh HD/Users/peter/Documents/code/sourcemaps/index.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/gulpfile.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/modals/_edit_address_modal.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/AddressModal.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/Dispatcher.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/node_modules/flux/lib/Dispatcher.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/ModalActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/Store.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/models/countries.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/data/spogo/countries.json",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/migrations/0034_auto_20150529_1157.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/countries.json",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/fixtures/subscription_types.json",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/migrations/0005_DATA_subscription_types.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/web/components/_venue.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_image.py",
+		"/Users/peter/virtual_envs/PROJ-Membi/lib/python3.4/site-packages/rest_framework/serializers.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/fixtures/facility_types.json",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/image.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/modals/_edit_facilities_modal.scss",
+		"/Users/peter/Desktop/Anurag-README.txt",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/vendor/font-awesome/scss/_variables.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/FacilityManagerActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/UserStore.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/migrations/0033_DATA_facility_types.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_venue_image.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/_venues.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Venues.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/_navbar.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_autocomplete.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/modals/ConfirmModal.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_confirm_modal.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_venue_claim.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Navbar.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Overview.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Sidebar.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/api.js",
+		"/Users/peter/github/market-maker/market-maker.py",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/modals/_edit_image_modal.scss",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/AppHeader.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/templates/portal/home.html",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/ContentEditable.jsx",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/ImageManagerActionCreator.js",
+		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/web/detail.scss"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			"stampsy/",
+			"*.js*",
+			"*.js",
+			"*.py",
+			"*.js*",
+			"*.json",
+			"*.py",
+			"stampsy/",
+			"*.js",
+			"*.py",
+			"clientadmin/",
+			"client/",
+			"*.js",
+			"*.py",
+			"*.jsx",
+			"*.scss",
+			"*.js*",
+			"*.jsx",
+			"*.py",
+			"*.js",
+			"*.py",
+			"<project>",
+			"PROJ-Challenge/",
+			"PROJ-Challenge/challenge",
+			"PROJ-Challenge/",
+			"PROJ-Challenge/venv",
+			"/venv",
+			"venv",
+			"",
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"immutable",
+			"VenueActionCreator",
+			"TimingsStore",
+			"WeekDayStore",
+			"PriceManagerActionCreator",
+			"PriceManagerStore",
+			"SET_WEEKDAY",
+			"PriceManagerModal",
+			"this.valueChangeHandler.bind",
+			"div",
+			"address",
+			"venue",
+			"ret",
+			"self.child",
+			"set_trace",
+			"WeekDaySerializer",
+			"_getWeekday",
+			"_getWeekDay",
+			"UserActionCreator",
+			"UserStore",
+			"openingTimes",
+			"\"",
+			", 0",
+			"book",
+			"book_id",
+			"book",
+			"time1",
+			"venue_id",
+			"timings",
+			"VenueTimingsAPI",
+			"fac1",
+			"line-hei",
+			"VenueTimingSerlializer",
+			"noscroll",
+			"no-scroll",
+			"GlobalAppStore",
+			"price.value",
+			"price.type",
+			"price.category",
+			".type",
+			"['name']",
+			":",
+			",\"short_desc\":null",
+			"result",
+			"state.priceCategories",
+			"prices",
+			"weekday",
+			"entry",
+			"load_fixture",
+			"permission_classes",
+			"_priceTypes",
+			"this",
+			"type",
+			"value",
+			"MultiSelectBtn",
+			"type",
+			"priceType",
+			"Types",
+			"null",
+			"console.log",
+			"PriceType",
+			"FacilityType",
+			"value",
+			"_this",
+			"categories",
+			"types",
+			"priceTypes",
+			"PriceCategorySerializer",
+			"VenuePriceSerializer",
+			"FacilityManagerModal",
+			"openPrice",
+			"FacilityActionCreator",
+			"category",
+			"prices",
+			"detail",
+			"price_table",
+			"FacilityManagerStore",
+			"FacilityManagerModal",
+			"FacilityItem",
+			"Climbing",
+			"get_queryset",
+			"facilities",
+			"this",
+			"FacilityManager",
+			"save",
+			"_calc_avg_reviews",
+			"rating",
+			"post_code",
+			"address_code",
+			"setVenue",
+			"setSidebarEntry",
+			"entry",
+			"setSidebarEntry",
+			"setAttr",
+			"VenueStore.getVenue",
+			"orig",
+			"this.state.venue",
+			"});",
+			"this.emit(",
+			"onClose",
+			"sidebar_entries",
+			"0",
+			"ret",
+			"indexed_existing",
+			"sidebar_extras",
+			"extra",
+			"sidebarentry",
+			"extra",
+			"sidebarextra",
+			"sidebar_extras",
+			"VenueSidebarEntry",
+			"VenueSidebarExtra",
+			"sidebarentry",
+			"sidebar",
+			"Extras",
+			"extras",
+			"sidebar_entries",
+			"entries",
+			"sidebar_e",
+			"sidebar_ext",
+			"Person",
+			"text",
+			"name",
+			"model1.name",
+			"seelf",
+			"facilities",
+			"300ms",
+			"300"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"../lib/Dispatcher",
+			"2col.html",
+			"PROJ-Challenge",
+			"get_maya_sphere",
+			"create_shaders",
+			"get_points_in_region",
+			"scatter_points",
+			"set_marked",
+			"is_marked",
+			"get_vec_3",
+			"delete_all",
+			"draw_grid",
+			"arrange_tiles",
+			"draw_base_tiles",
+			"get_base_tiles",
+			"generate_base_tiles",
+			"get_locator",
+			"get_z",
+			"get_x",
+			"get_y",
+			"get_x",
+			"get_z",
+			"set_z",
+			"set_y",
+			"set_x",
+			"get_maya_edge",
+			"calc_length",
+			"draw_edges",
+			"draw_verts",
+			"set_pos",
+			"get_name",
+			"set_name",
+			"get_binary_code",
+			"mark_corners",
+			"get_edges",
+			"get_verts"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 139.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 106.0
+	},
+	"pinned_build_system": "",
+	"project": "react-date-picker.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"editvenue",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/constants/EditVenue.js"
+			],
+			[
+				"timingsac",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/TimingsActionCreator.js"
+			],
+			[
+				"pricemana",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/PriceManagerModal.jsx"
+			],
+			[
+				"price",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/PriceManagerStore.js"
+			],
+			[
+				"editvnue",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/constants/EditVenue.js"
+			],
+			[
+				"pricemanag",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/PriceManagerStore.js"
+			],
+			[
+				"editve",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/constants/EditVenue.js"
+			],
+			[
+				"constan",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/constants/Constants.js"
+			],
+			[
+				"weekda",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/WeekDayStore.js"
+			],
+			[
+				"facili",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/facility.py"
+			],
+			[
+				"ser",
+				"PROJ-Membi/sportmembi/web/serializers.py"
+			],
+			[
+				"dates",
+				"PROJ-Membi/sportmembi/web/models/dates.py"
+			],
+			[
+				"test_tim",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_timings.py"
+			],
+			[
+				"serial",
+				"PROJ-Membi/sportmembi/web/serializers.py"
+			],
+			[
+				"timings",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/timings.py"
+			],
+			[
+				"venues",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/VenueStore.js"
+			],
+			[
+				"seri",
+				"PROJ-Membi/sportmembi/web/serializers.py"
+			],
+			[
+				"views",
+				"PROJ-Membi/sportmembi/web/views.py"
+			],
+			[
+				"ursl",
+				"PROJ-Membi/sportmembi/sportmembi/urls.py"
+			],
+			[
+				"date",
+				"PROJ-Membi/sportmembi/web/models/dates.py"
+			],
+			[
+				"urls",
+				"PROJ-Membi/sportmembi/sportmembi/urls.py"
+			],
+			[
+				"detail",
+				"PROJ-Membi/sportmembi/web/templates/detail.html"
+			],
+			[
+				"prices",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/prices.py"
+			],
+			[
+				"test_fac",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_facility.py"
+			],
+			[
+				"venue",
+				"PROJ-Membi/sportmembi/web/models/venue.py"
+			],
+			[
+				"edit_venue",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/components/_edit_venue.scss"
+			],
+			[
+				"home.scs",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/home.scss"
+			],
+			[
+				"models.",
+				"PROJ-Membi/sportmembi/clientadmin/models.py"
+			],
+			[
+				"seria",
+				"PROJ-Membi/sportmembi/web/serializers.py"
+			],
+			[
+				"venue.p",
+				"PROJ-Membi/sportmembi/web/models/venue.py"
+			],
+			[
+				"editv",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/constants/EditVenue.js"
+			],
+			[
+				"todo",
+				"PROJ-Membi/TODO"
+			],
+			[
+				"global",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/GlobalAppStore.jsx"
+			],
+			[
+				"app",
+				"stampsy/App.jsx"
+			],
+			[
+				"modals",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/ModalStore.js"
+			],
+			[
+				"modalhos",
+				"PROJ-Membi/sportmembi/client/js/lib/components/ModalHost.jsx"
+			],
+			[
+				"common.",
+				"PROJ-Membi/sportmembi/client/scss/lib/_common.scss"
+			],
+			[
+				"common",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/_common.scss"
+			],
+			[
+				"modal.scs",
+				"PROJ-Membi/sportmembi/client/scss/lib/_modals.scss"
+			],
+			[
+				"homebo",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/HomeBody.jsx"
+			],
+			[
+				"brow",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/browser.jsx"
+			],
+			[
+				"brows",
+				"stampsy/utils/Browser.js"
+			],
+			[
+				"app.jsx",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/app.jsx"
+			],
+			[
+				"documn",
+				"stampsy/atoms/DocumentTitle.jsx"
+			],
+			[
+				"venueactino",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/VenueActionCreator.js"
+			],
+			[
+				"week",
+				"PROJ-Membi/sportmembi/web/fixtures/weekday.json"
+			],
+			[
+				"faicli",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/facility.py"
+			],
+			[
+				"test_facil",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_facility.py"
+			],
+			[
+				"test_prices",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_prices.py"
+			],
+			[
+				"prices.",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/prices.py"
+			],
+			[
+				"venue.",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/venue.py"
+			],
+			[
+				"venueac",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/VenueActionCreator.js"
+			],
+			[
+				"pircemana",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/PriceManagerStore.js"
+			],
+			[
+				"editvenues",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/EditVenueStore.js"
+			],
+			[
+				"editvenuea",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/EditVenueActionCreator.js"
+			],
+			[
+				"editvneue",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/EditVenue.jsx"
+			],
+			[
+				"inputs",
+				"PROJ-Membi/sportmembi/client/scss/lib/_inputs.scss"
+			],
+			[
+				"buttons",
+				"PROJ-Membi/sportmembi/client/scss/lib/_buttons.scss"
+			],
+			[
+				"test_sid",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_sidebar_entry.py"
+			],
+			[
+				"sidebar",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/sidebar_entry.py"
+			],
+			[
+				"pirceman",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/PriceManagerActionCreator.js"
+			],
+			[
+				"base",
+				"PROJ-Membi/sportmembi/client/scss/lib/_base.scss"
+			],
+			[
+				"input",
+				"PROJ-Membi/sportmembi/client/scss/lib/_inputs.scss"
+			],
+			[
+				"_edit_venue",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/components/_edit_venue.scss"
+			],
+			[
+				"fac",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/facility.py"
+			],
+			[
+				"url",
+				"PROJ-Membi/sportmembi/clientadmin/urls.py"
+			],
+			[
+				"consta",
+				"PROJ-Membi/sportmembi/client/js/lib/Constants.js"
+			],
+			[
+				"seriali",
+				"PROJ-Membi/sportmembi/web/serializers.py"
+			],
+			[
+				"select",
+				"PROJ-Membi/sportmembi/client/js/lib/components/MultiSelectBtn.jsx"
+			],
+			[
+				"views.",
+				"PROJ-Membi/sportmembi/web/views.py"
+			],
+			[
+				"home.p",
+				"PROJ-Membi/sportmembi/clientadmin/views/home.py"
+			],
+			[
+				"facilit",
+				"PROJ-Membi/sportmembi/web/models/facility.py"
+			],
+			[
+				"_edit",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/components/_edit_venue.scss"
+			],
+			[
+				"editfacili",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/FacilityManagerModal.jsx"
+			],
+			[
+				"detail.h",
+				"PROJ-Membi/sportmembi/web/templates/detail.html"
+			],
+			[
+				"test_",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_sidebar_entry.py"
+			],
+			[
+				"venueaction",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/VenueActionCreator.js"
+			],
+			[
+				"editvenuesotr",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/EditVenueStore.js"
+			],
+			[
+				"editvenueso",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/EditVenueStore.js"
+			],
+			[
+				"modalsto",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/ModalStore.js"
+			],
+			[
+				"facilimana",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/FacilityManagerStore.js"
+			],
+			[
+				"editvenueac",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/actions/EditVenueActionCreator.js"
+			],
+			[
+				"imagemanage",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/ImageManagerModal.jsx"
+			],
+			[
+				"imagemana",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/stores/ImageManagerStore.js"
+			],
+			[
+				"facilitymaa",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/FacilityManagerModal.jsx"
+			],
+			[
+				"editsideb",
+				"PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/EditSidebar.jsx"
+			],
+			[
+				"facil",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/facility.py"
+			],
+			[
+				"sidebar_ent",
+				"PROJ-Membi/sportmembi/clientadmin/views/api/sidebar_entry.py"
+			],
+			[
+				"data",
+				"PROJ-Membi/sportmembi/web/migrations/0035_DATA_countries.py"
+			],
+			[
+				"svenue",
+				"PROJ-Membi/sportmembi/web/models/venue.py"
+			],
+			[
+				"test_venue",
+				"PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_venue.py"
+			],
+			[
+				"modalscss",
+				"sportmembi/client/scss/lib/_modals.scss"
+			],
+			[
+				"modalho",
+				"stampsy/hosts/ModalHost.jsx"
+			],
+			[
+				"_edit_ve",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/components/_edit_venue.scss"
+			],
+			[
+				"colors",
+				"PROJ-Membi/sportmembi/client/scss/lib/_colors.scss"
+			],
+			[
+				"color",
+				"stampsy/constants/Colors.js"
+			],
+			[
+				"_edit_venue.scs",
+				"PROJ-Membi/sportmembi/client/scss/clientadmin/components/_edit_venue.scss"
+			],
+			[
+				"modalst",
+				"sportmembi/client/js/clientadmin/stores/ModalStore.js"
+			],
+			[
+				"editsi",
+				"sportmembi/client/js/clientadmin/components/edit_venue/EditSidebar.jsx"
+			],
+			[
+				"gulp",
+				"sportmembi/client/gulpfile.js"
+			],
+			[
+				"dispa",
+				"sportmembi/client/js/lib/Dispatcher.js"
+			],
+			[
+				"modalsr",
+				"sportmembi/client/js/clientadmin/stores/ModalStore.js"
+			],
+			[
+				"addressmodal",
+				"sportmembi/client/js/clientadmin/components/edit_venue/AddressModal.jsx"
+			],
+			[
+				"modalstore",
+				"sportmembi/client/js/clientadmin/stores/ModalStore.js"
+			],
+			[
+				"modalac",
+				"sportmembi/client/js/clientadmin/actions/ModalActionCreator.js"
+			],
+			[
+				"editven",
+				"sportmembi/client/js/clientadmin/constants/EditVenue.js"
+			],
+			[
+				"store.js",
+				"sportmembi/client/js/lib/Store.js"
+			],
+			[
+				"venuestore",
+				"sportmembi/client/js/clientadmin/stores/VenueStore.js"
+			],
+			[
+				"countrie",
+				"sportmembi/countries.json"
+			],
+			[
+				"subscip",
+				"sportmembi/clientadmin/fixtures/subscription_types.json"
+			],
+			[
+				"de",
+				"sportmembi/web/templates/detail.html"
+			],
+			[
+				"venue.scs",
+				"sportmembi/client/scss/web/components/_venue.scss"
+			],
+			[
+				"edit",
+				"sportmembi/client/js/clientadmin/components/edit_venue/EditVenue.jsx"
+			],
+			[
+				"test_fc",
+				"sportmembi/clientadmin/tests/views/api/test_facility.py"
+			],
+			[
+				"facility",
+				"sportmembi/clientadmin/views/api/facility.py"
+			],
+			[
+				"modalh",
+				"sportmembi/client/js/lib/components/ModalHost.jsx"
+			],
+			[
+				"vari",
+				"sportmembi/client/vendor/font-awesome/scss/_variables.scss"
+			],
+			[
+				"cons",
+				"sportmembi/client/js/clientadmin/constants/Constants.js"
+			],
+			[
+				"users",
+				"sportmembi/client/js/clientadmin/stores/UserStore.js"
+			],
+			[
+				"serie",
+				"sportmembi/clientadmin/serializers.py"
+			],
+			[
+				"faca",
+				"sportmembi/client/js/clientadmin/stores/FacilityManagerStore.js"
+			],
+			[
+				"navba",
+				"sportmembi/client/scss/clientadmin/components/_navbar.scss"
+			],
+			[
+				"const",
+				"sportmembi/client/js/clientadmin/constants/Constants.js"
+			],
+			[
+				"vneueac",
+				"sportmembi/client/js/clientadmin/actions/VenueActionCreator.js"
+			],
+			[
+				"modal",
+				"sportmembi/client/js/clientadmin/actions/ModalActionCreator.js"
+			],
+			[
+				"venues.scss",
+				"sportmembi/client/scss/clientadmin/components/_venues.scss"
+			],
+			[
+				"venues.",
+				"sportmembi/client/js/clientadmin/components/Venues.jsx"
+			],
+			[
+				"navbar",
+				"sportmembi/client/scss/clientadmin/components/_navbar.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/Volumes/Macintosh HD/Users/peter/Documents/sublime-projects/PROJ-Membi.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 296.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -3,4 +3,4 @@
 module.exports = {
 	separator: ':',
 	twoDigits: true
-}
+};

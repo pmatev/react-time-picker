@@ -1,14 +1,14 @@
 'use strict';
 
-var React      = require('react')
-var TimePicker = require('./src')
+var React      = require('react');
+var TimePicker = require('./src');
 
-var VALUE = '03 AM'
+var VALUE = '03 AM';
 
 var onChange = function(value, m, t){
 	// console.log(value, m,t);
-    picker.setProps({value: value})
-}
+    picker.setProps({value: value});
+};
 
 var picker = React.render(
     <TimePicker
@@ -18,4 +18,4 @@ var picker = React.render(
         onChange={onChange}
     />,
     document.getElementById('content')
-)
+);

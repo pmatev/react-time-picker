@@ -1,16 +1,16 @@
 'use strict';
 
-var validHour     = require('./validHour')
-var validMinute   = require('./validMinute')
-var validSecond   = require('./validSecond')
-var validMeridian = require('./validMeridian')
+var validHour     = require('./validHour');
+var validMinute   = require('./validMinute');
+var validSecond   = require('./validSecond');
+var validMeridian = require('./validMeridian');
 
 var VALIDATION_MAP = {
 	hour    : validHour,
 	minute  : validMinute,
 	second  : validSecond,
 	meridian: validMeridian
-}
+};
 
 /**
  * VALIDATES TIME PART [name, value] eg ['hour', '15']
@@ -42,7 +42,7 @@ var VALIDATION_MAP = {
  * @return {Boolean}
  */
 module.exports = function isValidPart(name, value, config){
-	var fn = VALIDATION_MAP[name]
+	var fn = VALIDATION_MAP[name];
 
-	return !!(fn && fn(value, config))
-}
+	return !!(fn && fn(value, config));
+};
