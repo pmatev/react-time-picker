@@ -1,0 +1,24 @@
+scss_files: "**/*.scss"
+
+linters:
+  StringQuotes:
+    enabled: true
+    style: double_quotes
+
+  Indentation:
+    enabled: false
+
+  DeclarationOrder:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+
+  NameFormat:
+    enabled: false
+
+  LeadingZero:
+    enabled: false
+
+  SelectorFormat:
+    enabled: false

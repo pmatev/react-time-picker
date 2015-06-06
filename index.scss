@@ -1,0 +1,24 @@
+// Example scss file.
+
+.timepicker {
+	display: flex;
+	align-items: center;
+
+    .timepicker__box {
+        display: flex;
+        align-items: center;
+    }
+
+    .timepicker__uparrow:after {
+        content: "▲";
+    }
+
+    .timepicker__downarrow:after {
+        content: "▼";
+    }
+
+    .timepicker__input {
+        max-width: 2em;
+    }
+
+}

@@ -519,14 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 6117,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -536,9 +528,61 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "clos",
+		"last_filter": "nex",
 		"selected_items":
 		[
+			[
+				"nex",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"fomrat",
+				"Format: Javascript"
+			],
+			[
+				"",
+				"File: Close All"
+			],
+			[
+				"fix",
+				"FixMyJS"
+			],
+			[
+				"dif",
+				"Git: Diff Current File"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ne",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"error",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
 			[
 				"clos",
 				"File: Close All"
@@ -554,10 +598,6 @@
 			[
 				"save",
 				"File: Save All"
-			],
-			[
-				"space",
-				"Indentation: Convert to Spaces"
 			],
 			[
 				"docs",
@@ -612,18 +652,6 @@
 				"Indentation: Convert to Spaces"
 			],
 			[
-				"tabs",
-				"Indentation: Convert to Tabs"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
-				"",
-				"Anaconda: Autoformat PEP8 Errors"
-			],
-			[
 				"close al",
 				"File: Close All"
 			],
@@ -634,14 +662,6 @@
 			[
 				"disabl",
 				"Package Control: Disable Package"
-			],
-			[
-				"dif",
-				"Git: Diff Current File (Ignore Whitespace)"
-			],
-			[
-				"nex",
-				"SublimeLinter: Next Error"
 			],
 			[
 				"pretti",
@@ -828,10 +848,6 @@
 				"Emmet: Increment Number by 1"
 			],
 			[
-				"javascr",
-				"Set Syntax: JavaScript"
-			],
-			[
 				"javasc",
 				"Set Syntax: JavaScript Next"
 			],
@@ -940,10 +956,6 @@
 				"Set Syntax: JSON"
 			],
 			[
-				"diff",
-				"Git: Diff Current File"
-			],
-			[
 				"list",
 				"Package Control: List Packages"
 			],
@@ -1030,26 +1042,6 @@
 			[
 				"stat",
 				"Git: Status"
-			],
-			[
-				"spac",
-				"Indentation: Convert to Spaces"
-			],
-			[
-				"instla",
-				"Package Control: Install Package"
-			],
-			[
-				"git add",
-				"Git: Add..."
-			],
-			[
-				"git comm",
-				"Git: Commit"
-			],
-			[
-				"git stat",
-				"Git: Status"
 			]
 		],
 		"width": 475.0
@@ -1073,10 +1065,38 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/peter/github/react-time-picker"
+		"/Users/peter/github/react-time-picker",
+		"/Users/peter/github/react-time-picker/src"
 	],
 	"file_history":
 	[
+		"/Users/peter/github/react-time-picker/index.scss",
+		"/Users/peter/github/react-time-picker/src/index.jsx",
+		"/Users/peter/github/react-time-picker/lib/formatTime.js",
+		"/Users/peter/github/react-time-picker/index.jsx",
+		"/Users/peter/github/react-time-picker/dist.config.js",
+		"/Users/peter/github/react-time-picker/dist.min.config.js",
+		"/Users/peter/github/react-time-picker/dist.nomoment.config.js",
+		"/Users/peter/github/react-time-picker/dist.nomoment.min.config.js",
+		"/Users/peter/github/react-time-picker/Gulpfile.js",
+		"/Users/peter/github/react-time-picker/loaders.config.js",
+		"/Users/peter/github/react-time-picker/webpack.config.js",
+		"/Users/peter/github/react-time-picker/.jshintrc",
+		"/Users/peter/github/react-time-picker/src/getFormat/index.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/isValidPart.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/validHour.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/validMeridian.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/validMinute.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/validNumber.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/validSecond.js",
+		"/Users/peter/github/react-time-picker/src/getFormat/defaults.js",
+		"/Users/peter/github/react-time-picker/src/getFormatInfo.js",
+		"/Users/peter/github/react-time-picker/src/parseTime.js",
+		"/Users/peter/github/react-time-picker/src/toUpperFirst.js",
+		"/Users/peter/github/react-time-picker/src/twoDigits.js",
+		"/Users/peter/github/react-time-picker/src/format.js",
+		"/Users/peter/github/react-time-picker/src/formatTime.js",
+		"/Users/peter/github/react-time-picker/README.md",
 		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/edit_venue/PriceManagerModal.jsx",
 		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/constants/Constants.js",
 		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/WeekDayStore.js",
@@ -1177,38 +1197,11 @@
 		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/migrations/0005_DATA_subscription_types.py",
 		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/web/components/_venue.scss",
 		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_image.py",
-		"/Users/peter/virtual_envs/PROJ-Membi/lib/python3.4/site-packages/rest_framework/serializers.py",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/fixtures/facility_types.json",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/views/api/image.py",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/modals/_edit_facilities_modal.scss",
-		"/Users/peter/Desktop/Anurag-README.txt",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/vendor/font-awesome/scss/_variables.scss",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/FacilityManagerActionCreator.js",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/stores/UserStore.js",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/web/migrations/0033_DATA_facility_types.py",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_venue_image.py",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/_venues.scss",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Venues.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/_navbar.scss",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_autocomplete.scss",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/modals/ConfirmModal.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/lib/_confirm_modal.scss",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/tests/views/api/test_venue_claim.py",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Navbar.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Overview.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/Sidebar.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/api.js",
-		"/Users/peter/github/market-maker/market-maker.py",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/clientadmin/components/modals/_edit_image_modal.scss",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/components/AppHeader.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/clientadmin/templates/portal/home.html",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/lib/components/ContentEditable.jsx",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/js/clientadmin/actions/ImageManagerActionCreator.js",
-		"/Volumes/Macintosh HD/Users/peter/Documents/webdev/PROJ-Membi/sportmembi/client/scss/web/detail.scss"
+		"/Users/peter/virtual_envs/PROJ-Membi/lib/python3.4/site-packages/rest_framework/serializers.py"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -1253,6 +1246,52 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"handleInputChange",
+			"onArrowAction",
+			"startInterval",
+			"timeoutId",
+			"stopInterval",
+			"handleInputFocus",
+			"focus",
+			"focused",
+			"emptyFn",
+			"focused",
+			"handleInputChange",
+			"onChange",
+			"renderSecond",
+			"second",
+			"seconds",
+			"inputFactory",
+			"input",
+			"input ",
+			"<input",
+			"style",
+			"overArrow",
+			"mouseOver",
+			"hover",
+			"uparrow",
+			"flex",
+			"name",
+			"style",
+			"arrowDownProps",
+			"defaultArrowFactory",
+			"arrowDownProps",
+			"arrow",
+			"arrowFactory",
+			"arrowUpFactory",
+			"defaultArrowFactory",
+			"span",
+			"prepareProps",
+			"<span",
+			"<div",
+			"className",
+			"prepareStyle",
+			"props.style",
+			"style=",
+			"style",
+			"!= null",
+			"!= undefined",
+			"normalize",
 			"immutable",
 			"VenueActionCreator",
 			"TimingsStore",
@@ -1334,53 +1373,7 @@
 			"FacilityItem",
 			"Climbing",
 			"get_queryset",
-			"facilities",
-			"this",
-			"FacilityManager",
-			"save",
-			"_calc_avg_reviews",
-			"rating",
-			"post_code",
-			"address_code",
-			"setVenue",
-			"setSidebarEntry",
-			"entry",
-			"setSidebarEntry",
-			"setAttr",
-			"VenueStore.getVenue",
-			"orig",
-			"this.state.venue",
-			"});",
-			"this.emit(",
-			"onClose",
-			"sidebar_entries",
-			"0",
-			"ret",
-			"indexed_existing",
-			"sidebar_extras",
-			"extra",
-			"sidebarentry",
-			"extra",
-			"sidebarextra",
-			"sidebar_extras",
-			"VenueSidebarEntry",
-			"VenueSidebarExtra",
-			"sidebarentry",
-			"sidebar",
-			"Extras",
-			"extras",
-			"sidebar_entries",
-			"entries",
-			"sidebar_e",
-			"sidebar_ext",
-			"Person",
-			"text",
-			"name",
-			"model1.name",
-			"seelf",
-			"facilities",
-			"300ms",
-			"300"
+			"facilities"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1388,6 +1381,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"inputProps",
+			"ops = assi",
 			"../lib/Dispatcher",
 			"2col.html",
 			"PROJ-Challenge",
@@ -1434,39 +1429,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6117,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1526,6 +1490,30 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"index.scs",
+				"index.scss"
+			],
+			[
+				"format",
+				"lib/formatTime.js"
+			],
+			[
+				"form",
+				"lib/formatTime.js"
+			],
+			[
+				"index.",
+				"index.jsx"
+			],
+			[
+				".js",
+				".jshintrc"
+			],
+			[
+				"index",
+				"index.jsx"
+			],
 			[
 				"editvenue",
 				"PROJ-Membi/sportmembi/client/js/clientadmin/constants/EditVenue.js"
@@ -2012,30 +2000,6 @@
 			],
 			[
 				"navba",
-				"sportmembi/client/scss/clientadmin/components/_navbar.scss"
-			],
-			[
-				"const",
-				"sportmembi/client/js/clientadmin/constants/Constants.js"
-			],
-			[
-				"vneueac",
-				"sportmembi/client/js/clientadmin/actions/VenueActionCreator.js"
-			],
-			[
-				"modal",
-				"sportmembi/client/js/clientadmin/actions/ModalActionCreator.js"
-			],
-			[
-				"venues.scss",
-				"sportmembi/client/scss/clientadmin/components/_venues.scss"
-			],
-			[
-				"venues.",
-				"sportmembi/client/js/clientadmin/components/Venues.jsx"
-			],
-			[
-				"navbar",
 				"sportmembi/client/scss/clientadmin/components/_navbar.scss"
 			]
 		],

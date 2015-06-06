@@ -166,13 +166,13 @@ module.exports = React.createClass({
 		var second   = this.renderSecond(props);
 		var meridian = this.renderMeridian(props);
 
-		var separator       = props.separator || <span style={props.separatorStyle}>{WHITESPACE + ':' + WHITESPACE}</span>;
+		var separator       = props.separator || <span className="timepicker__separator" style={props.separatorStyle}>{WHITESPACE + ':' + WHITESPACE}</span>;
 		var hourSeparator   = hour && (minute || second || meridian)? props.hourSeparator || separator: null;
 		var minuteSeparator = minute && (second || meridian)? props.minuteSeparator || separator: null;
 		var secondSeparator = (second && meridian)? props.secondSeparator || separator: null;
 
 
-		return <div {...props}>
+		return <div className="timepicker" {...props}>
 			{hour}
 			{hourSeparator}
 			{minute}
@@ -406,8 +406,8 @@ module.exports = React.createClass({
 
 			var arrowUpProps = {
 				mouseOver: overArrow == 1,
-				style    : arrowUpStyle,
-				children : '▲'
+				// style    : arrowUpStyle,
+				className: 'timepicker__uparrow'
 			};
 
 			arrowUpProps[EVENT_NAMES.onMouseDown] = this.onArrowMouseDown.bind(this, props, 1, name);
@@ -428,8 +428,8 @@ module.exports = React.createClass({
 
 			var arrowDownProps = {
 				mouseOver: overArrow == -1,
-				style    : arrowDownStyle,
-				children : '▼'
+				// style    : arrowDownStyle,
+				className: 'timepicker__downarrow'
 			};
 
 			arrowDownProps[EVENT_NAMES.onMouseDown] = this.onArrowMouseDown.bind(this, props, -1, name);
@@ -460,7 +460,8 @@ module.exports = React.createClass({
 
 		inputProps = assign({}, props.inputProps, defaultInputProps, inputProps, {
 			timeName: name,
-			style   : inputStyle,
+			className: 'timepicker__input',
+			// style   : inputStyle,
 			value   : value,
 			onBlur  : this.handleInputBlur.bind(this, props, name),
 			onChange: this.handleInputChange.bind(this, props, name),
@@ -482,7 +483,7 @@ module.exports = React.createClass({
 		}
 
 
-		return <div style={style}>
+		return <div className="timepicker__box">
 			{arrowUp}
 			{input}
 			{arrowDown}
@@ -517,7 +518,7 @@ module.exports = React.createClass({
 		this.lastStateChange = name;
 
 		this.setState({});
-		// props.stopChangePropagation && event.stopPropagation();
+		if (props.stopChangePropagation) event.stopPropagation();
 	},
 
 	/**
@@ -651,14 +652,14 @@ module.exports = React.createClass({
 		this.time   = props.time   = this.getTime(props.moment);
 
 		this.prepareBoxes(props, state);
-		this.prepareStyles(props, state);
+		// this.prepareStyles(props, state);
 
 		return props;
 	},
 
 	prepareStyles: function(props, state) {
 
-		props.style = this.prepareStyle(props, state);
+		// props.style = this.prepareStyle(props, state);
 		props.separatorStyle = this.prepareSeparatorStyle(props, state);
 		this.prepareArrowStyles(props, state);
 
@@ -669,9 +670,9 @@ module.exports = React.createClass({
 
 	},
 
-	prepareStyle: function(props, state) {
-		return this.normalize(assign({}, props.defaultStyle, props.style));
-	},
+	// prepareStyle: function(props, state) {
+	// 	return this.normalize(assign({}, props.defaultStyle, props.style));
+	// },
 
 	prepareSeparatorStyle: function(props, state) {
 		return this.normalize(assign({}, props.defaultSeparatorStyle, props.separatorStyle));
